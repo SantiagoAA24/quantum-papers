@@ -12,6 +12,8 @@ export interface SiteHeaderProps {
   /** Menú abierto en la versión móvil. Sin esta prop, el componente lo gestiona solo. */
   open?: boolean;
   onMenuClick?: () => void;
+  /** Si se indica, el chip ⌘K es un botón que abre la paleta de comandos. */
+  onPaletteClick?: () => void;
   className?: string;
 }
 
@@ -22,7 +24,7 @@ const DEFAULT_LINKS = [
   { label: "cómo_funciona", href: "#" },
 ];
 
-export function SiteHeader({ links = DEFAULT_LINKS, homeHref, compact, open: openProp, onMenuClick, className }: SiteHeaderProps) {
+export function SiteHeader({ links = DEFAULT_LINKS, homeHref, compact, open: openProp, onMenuClick, onPaletteClick, className }: SiteHeaderProps) {
   const [openState, setOpenState] = useState(false);
   const navId = useId();
   const open = openProp !== undefined ? openProp : openState;
@@ -49,9 +51,21 @@ export function SiteHeader({ links = DEFAULT_LINKS, homeHref, compact, open: ope
             {l.label}
           </Link>
         ))}
-        <span className="qp-kbd" aria-hidden="true">
-          ⌘K
-        </span>
+        {onPaletteClick ? (
+          <button
+            type="button"
+            className="qp-kbd qp-kbd--button"
+            data-qp-palette-trigger=""
+            aria-keyshortcuts="Control+K Meta+K"
+            onClick={onPaletteClick}
+          >
+            ⌘K<span className="qp-sr-only"> abrir paleta de comandos</span>
+          </button>
+        ) : (
+          <span className="qp-kbd" aria-hidden="true">
+            ⌘K
+          </span>
+        )}
       </nav>
     </header>
   );

@@ -46,6 +46,8 @@ export interface ResultRowProps {
   topic: string;
   /** Similitud de 0 a 1; solo dibuja la barra. */
   similarity: number;
+  /** Si se indica, el título es un enlace a este destino. */
+  href?: string;
 }
 
 /** Fila de la tabla de papers. */
@@ -78,6 +80,8 @@ export interface SiteHeaderProps {
   /** Menú abierto en la versión móvil. Sin esta prop, el componente lo gestiona solo. */
   open?: boolean;
   onMenuClick?: () => void;
+  /** Si se indica, el chip ⌘K es un botón que abre la paleta de comandos. */
+  onPaletteClick?: () => void;
   className?: string;
 }
 
@@ -184,7 +188,7 @@ export function SiteFooter(props: SiteFooterProps): JSX.Element;
 
 /** Paleta de comandos (⌘K): campo de búsqueda, resultados agrupados y pie con atajos. El fondo atenuado lo pone la página. */
 export interface CommandPaletteProps {
-  groups: { label: string; items: { label: string; /** Texto corto a la derecha (tipo o atajo). */ hint?: string; /** Elemento resaltado por el teclado. */ active?: boolean }[] }[];
+  groups: { label: string; items: { label: string; /** Texto corto a la derecha (tipo o atajo). */ hint?: string; /** Elemento resaltado por el teclado. */ active?: boolean; /** Se invoca al elegir el ítem con Enter o clic. */ onSelect?: () => void }[] }[];
   defaultValue?: string;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

@@ -7,7 +7,7 @@ import { Command, CommandGroup, CommandInput, CommandItem, CommandList } from "@
 export interface CommandPaletteProps {
   groups: {
     label: string;
-    items: { label: string; /** Texto corto a la derecha (tipo o atajo). */ hint?: string; /** Elemento resaltado por el teclado. */ active?: boolean }[];
+    items: { label: string; /** Texto corto a la derecha (tipo o atajo). */ hint?: string; /** Elemento resaltado por el teclado. */ active?: boolean; /** Se invoca al elegir el ítem con Enter o clic. */ onSelect?: () => void }[];
   }[];
   defaultValue?: string;
   placeholder?: string;
@@ -51,7 +51,7 @@ export function CommandPalette({ groups, defaultValue, placeholder, onChange, la
                 const value = itemValue(g.label, it.label);
                 const active = value === selected;
                 return (
-                  <CommandItem key={it.label} value={value} className={cx("qp-cmd__item", active && "qp-cmd__item--active")}>
+                  <CommandItem key={it.label} value={value} className={cx("qp-cmd__item", active && "qp-cmd__item--active")} onSelect={it.onSelect}>
                     <span className="qp-cmd__marker" aria-hidden="true">
                       {active ? ">" : ""}
                     </span>

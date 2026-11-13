@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
-import { SiteFooter, SiteHeader } from "@/components/qp";
+import { AppHeader } from "@/components/AppHeader";
+import { SiteFooter } from "@/components/qp";
 import { SITE_URL } from "@/lib/format";
 import "./globals.css";
 
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <body>
         <div className="qp-page">
-          <SiteHeader links={NAV} homeHref="/" />
+          <AppHeader links={NAV} homeHref="/" />
           {children}
           <div className="qp-page__footer">
             <SiteFooter />
