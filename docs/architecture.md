@@ -51,7 +51,7 @@ Cada ruta usa la estrategia más barata que cumple su necesidad de frescura: lo 
 | Ruta | Estrategia | Datos y caché | Diseño |
 | --- | --- | --- | --- |
 | `/` | SSG | Destacados y temas se leen al construir; se regenera con cada despliegue | Home (opción B) |
-| `/search` | SSR + streaming | `searchParams` (`q`, `tema`, `desde`, `hasta`, `orden`); Suspense con `ResultRowSkeleton`; `noindex` | Resultados, cargando, vacío, error |
+| `/search` | SSR + streaming | `searchParams` (`q`, `topic` repetible, `year_from`, `year_to`, `category`), validados en `lib/search-params.ts`; Suspense con `ResultRowSkeleton`; sin JavaScript, `<noscript>` redirige a `render=full` (misma página sin streaming); `noindex` | Resultados, cargando, vacío, error |
 | `/papers/page/[n]` | ISR | Listado paginado; `revalidate` de 1 hora | Listado (reutiliza Resultados) |
 | `/papers/[id]` | ISR | `generateStaticParams` para los más recientes; `revalidate` de 1 hora y revalidación bajo demanda; `notFound()` si no existe | Detalle y 404 |
 | `/authors/[slug]` | ISR | Papers del autor; mismo `revalidate` | Listado |
