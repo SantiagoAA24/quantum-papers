@@ -4,12 +4,12 @@ import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
-  variable: "--font-sans",
+  variable: "--font-space",
   subsets: ["latin"],
 });
 
 const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 

@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "incremental": false,
+    "plugins": [],
+    "baseUrl": "../..",
+    "paths": {
+      "@/*": ["./src/*"],
+      "react": ["./node_modules/@types/react"]
+    }
+  },
+  "include": ["../../next-env.d.ts", "./contract.ts"],
+  "exclude": ["../../node_modules"]
+}
