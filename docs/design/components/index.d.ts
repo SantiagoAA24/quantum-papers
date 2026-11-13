@@ -28,6 +28,11 @@ export interface SearchPanelProps {
   resultsLabel?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
+  /** Destino del formulario; con `action` funciona sin JavaScript. */
+  action?: string;
+  method?: 'get' | 'post';
+  /** Nombre del campo enviado (p. ej. "q"). */
+  name?: string;
   className?: string;
   /** Filas ResultRow. */
   children?: React.ReactNode;

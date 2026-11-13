@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { SiteFooter, SiteHeader } from "@/components/qp";
+import { SITE_URL } from "@/lib/format";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -14,9 +16,17 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "QuantumPapers",
+  metadataBase: new URL(SITE_URL),
+  title: { default: "QuantumPapers", template: "%s · QuantumPapers" },
   description: "Buscador semántico de papers de ML cuántico",
 };
+
+const NAV = [
+  { label: "papers", href: "/papers/page/1" },
+  { label: "temas", href: "#" },
+  { label: "autores", href: "#" },
+  { label: "cómo_funciona", href: "#" },
+];
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -24,7 +34,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="es"
       className={`${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <div className="qp-page">
+          <SiteHeader links={NAV} homeHref="/" />
+          {children}
+          <div className="qp-page__footer">
+            <SiteFooter />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

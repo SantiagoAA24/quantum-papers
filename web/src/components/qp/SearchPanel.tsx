@@ -12,6 +12,11 @@ export interface SearchPanelProps {
   resultsLabel?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
+  /** Destino del formulario; con `action` funciona sin JavaScript. */
+  action?: string;
+  method?: "get" | "post";
+  /** Nombre del campo enviado (p. ej. "q"). */
+  name?: string;
   className?: string;
   /** Filas ResultRow. */
   children?: React.ReactNode;
@@ -26,12 +31,15 @@ export function SearchPanel({
   resultsLabel,
   onChange,
   onSubmit,
+  action,
+  method,
+  name,
   className,
   children,
 }: SearchPanelProps) {
   return (
     <div className={cx("qp-panel", className)}>
-      <form className="qp-searchbar" onSubmit={onSubmit}>
+      <form className="qp-searchbar" action={action} method={method} onSubmit={onSubmit}>
         <label htmlFor={id} className="qp-sr-only">
           {label || "Consulta"}
         </label>
@@ -40,6 +48,7 @@ export function SearchPanel({
         </span>
         <input
           id={id}
+          name={name}
           type="search"
           className="qp-searchbar__input"
           defaultValue={defaultValue}
