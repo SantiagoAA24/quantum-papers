@@ -104,11 +104,13 @@ Cinco tablas bastan: los papers llevan el vector y el resumen, y autores y temas
 
 | Tabla | Campos clave | Notas |
 | --- | --- | --- |
-| `papers` | `id`, `arxiv_id` (único), `title`, `abstract`, `published_at`, `updated_at`, `version`, `primary_category`, `doi`, `pdf_url`, `ai_summary` (JSON: problema, método, resultado, modelo, fecha), `embedding` (vector de 1536 dimensiones) | `arxiv_id` hace idempotente la ingesta |
+| `papers` | `id`, `arxiv_id` (único), `title`, `abstract`, `published_at`, `updated_at`, `version`, `primary_category`, `doi`, `pdf_url`, `ai_summary` (JSON: problema, método, resultado, modelo, fecha), `embedding` (vector de 1536 dimensiones), `embedding_model` (texto, por defecto `text-embedding-3-small`) | `arxiv_id` hace idempotente la ingesta |
 | `authors` | `id`, `slug` (único), `name` | El `slug` se deriva del nombre |
 | `paper_authors` | `paper_id`, `author_id`, `position` | Conserva el orden de autores |
 | `topics` | `id`, `slug` (único), `label` | Los temas salen de la categoría y de términos frecuentes |
 | `paper_topics` | `paper_id`, `topic_id` | Un paper puede tener varios temas |
+
+`embedding_model` registra con qué modelo se calculó cada vector. Los datos de desarrollo del seed usan el valor `dev-fake` (vectores falsos y deterministas que la fase 4 reemplaza).
 
 Los 1536 de la dimensión corresponden a `text-embedding-3-small` de OpenAI; si se elige otro modelo, cambia la dimensión y hay que recalcular todos los vectores.
 
