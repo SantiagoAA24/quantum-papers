@@ -9,15 +9,15 @@ import { fileURLToPath } from "node:url";
 
 import { sql } from "drizzle-orm";
 
-import { createDb } from "../index";
+import { createDb } from "../index.ts";
 import {
   authors,
   paperAuthors,
   paperTopics,
   papers,
   topics,
-} from "../schema";
-import { FAKE_EMBEDDING_MODEL, fakeEmbedding } from "./fake-embedding";
+} from "../schema.ts";
+import { FAKE_EMBEDDING_MODEL, fakeEmbedding } from "./fake-embedding.ts";
 
 type SeedPaper = {
   arxiv_id: string;
@@ -45,7 +45,7 @@ export function slugify(value: string): string {
 async function main() {
   const file = fileURLToPath(new URL("./papers.json", import.meta.url));
   const data = JSON.parse(readFileSync(file, "utf8")) as SeedPaper[];
-  const { db, pool } = createDb();
+  const { db, close } = await createDb();
 
   try {
     for (const p of data) {
@@ -124,7 +124,7 @@ async function main() {
     }
     console.log(`Seeded ${data.length} papers (embeddings are dev-fake).`);
   } finally {
-    await pool.end();
+    await close();
   }
 }
 

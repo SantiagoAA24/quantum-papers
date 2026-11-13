@@ -1,0 +1,1052 @@
+[
+  {
+    "arxiv_id": "2501.07433",
+    "title": "Equivalence between exponential concentration in quantum machine learning kernels and barren plateaus in variational algorithms",
+    "abstract": "We formalize a rigorous connection between barren plateaus (BP) in variational quantum algorithms and exponential concentration of quantum kernels for machine learning. Our results imply that recently proposed strategies to build BP-free quantum circuits can be utilized to construct useful quantum kernels for machine learning. This is illustrated by a numerical example employing a provably BP-free quantum neural network to construct kernel matrices for classification datasets of increasing dimensionality without exponential concentration.",
+    "authors": [
+      "Pranav Kairon",
+      "Jonas Jäger",
+      "Roman V. Krems"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-01-13T16:01:26Z",
+    "updated_at": "2026-06-01T03:24:53Z",
+    "version": 4,
+    "doi": "10.1103/6hbr-kj64",
+    "pdf_url": "https://arxiv.org/pdf/2501.07433v4"
+  },
+  {
+    "arxiv_id": "2509.01812",
+    "title": "Quantum Machine Learning for UAV Swarm Intrusion Detection",
+    "abstract": "Intrusion detection in unmanned-aerial-vehicle (UAV) swarms is complicated by high mobility, non-stationary traffic, and severe class imbalance. Leveraging a 120 k-flow simulation corpus that covers five attack types, we benchmark three quantum-machine-learning (QML) approaches - quantum kernels, variational quantum neural networks (QNNs), and hybrid quantum-trained neural networks (QT-NNs) - against strong classical baselines. All models consume an 8-feature flow representation and are evaluated under identical preprocessing, balancing, and noise-model assumptions. We analyse the influence of encoding strategy, circuit depth, qubit count, and shot noise, reporting accuracy, macro-F1, ROC-AUC, Matthews correlation, and quantum-resource footprints. Results reveal clear trade-offs: quantum kernels and QT-NNs excel in low-data, nonlinear regimes, while deeper QNNs suffer from trainability issues, and CNNs dominate when abundant data offset their larger parameter count. The complete codebase and dataset partitions are publicly released to enable reproducible QML research in network security.",
+    "authors": [
+      "Kuan-Cheng Chen",
+      "Samuel Yen-Chi Chen",
+      "Tai-Yue Li",
+      "Chen-Yu Liu",
+      "Kin K. Leung"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-09-01T22:36:30Z",
+    "updated_at": "2025-09-01T22:36:30Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.01812v1"
+  },
+  {
+    "arxiv_id": "2505.24765",
+    "title": "Supervised Quantum Machine Learning: A Future Outlook from Qubits to Enterprise Applications",
+    "abstract": "Supervised Quantum Machine Learning (QML) represents an intersection of quantum computing and classical machine learning, aiming to use quantum resources to support model training and inference. This paper reviews recent developments in supervised QML, focusing on methods such as variational quantum circuits, quantum neural networks, and quantum kernel methods, along with hybrid quantum-classical workflows. We examine recent experimental studies that show partial indications of quantum advantage and describe current limitations including noise, barren plateaus, scalability issues, and the lack of formal proofs of performance improvement over classical methods. The main contribution is a ten-year outlook (2025-2035) that outlines possible developments in supervised QML, including a roadmap describing conditions under which QML may be used in applied research and enterprise systems over the next decade.",
+    "authors": [
+      "Srikanth Thudumu",
+      "Jason Fisher",
+      "Hung Du"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-05-30T16:29:12Z",
+    "updated_at": "2025-06-25T02:08:22Z",
+    "version": 5,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.24765v5"
+  },
+  {
+    "arxiv_id": "2506.12788",
+    "title": "The effect of Quantum Time Crystal Computing to Quantum Machine Learning methods",
+    "abstract": "Many body localization shows the robustness for external perturbations and time reversal symmetry on Time Crystal. This Time Crystal prolongs the coherence time, hence, it is used for quantum computers as qubits. Therefore, we established the method to exploit Time Crystals for quantum computing by controlling external noise called Quantum Time Crystal Computing and demonstrated solving the problem of generating correct waves using Quantum Reservoir Computing, and fitting of given function using Quantum Neural Network and Variational Quantum Kolmogorov-Arnold Network. As a consequence, we revealed that Quantum Time Crystal Computing lower the accuracy of Quantum Reservoir Computing and improved the accuracy of Quantum Neural Network and Variational Quantum Kolmogorov-Arnold Network. This result may be the one of milestones of Quantum Error Mitigation as the case that noise improves the accuracy of Quantum Machine Learning.",
+    "authors": [
+      "Hikaru Wakaura",
+      "Andriyan B. Suksmono"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-06-15T09:37:20Z",
+    "updated_at": "2025-06-15T09:37:20Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2506.12788v1"
+  },
+  {
+    "arxiv_id": "2405.09781",
+    "title": "An Independent Implementation of Quantum Machine Learning Algorithms in Qiskit for Genomic Data",
+    "abstract": "In this paper, we explore the power of Quantum Machine Learning as we extend, implement and evaluate algorithms like Quantum Support Vector Classifier (QSVC), Pegasos-QSVC, Variational Quantum Circuits (VQC), and Quantum Neural Networks (QNN) in Qiskit with diverse feature mapping techniques for genomic sequence classification.",
+    "authors": [
+      "Navneet Singh",
+      "Shiva Raj Pokhrel"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "published_at": "2024-05-16T03:00:41Z",
+    "updated_at": "2024-05-16T03:00:41Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2405.09781v1"
+  },
+  {
+    "arxiv_id": "2206.09933",
+    "title": "Quantum-machine-learning channel discrimination",
+    "abstract": "In the problem of quantum channel discrimination, one distinguishes between a given number of quantum channels, which is done by sending an input state through a channel and measuring the output state. This work studies applications of variational quantum circuits and machine learning techniques for discriminating such channels. In particular, we explore (i) the practical implementation of embedding this task into the framework of variational quantum computing, (ii) training a quantum classifier based on variational quantum circuits, and (iii) applying the quantum kernel estimation technique. For testing these three channel discrimination approaches, we considered a pair of entanglement-breaking channels and the depolarizing channel with two different depolarization factors. For the approach (i), we address solving the quantum channel discrimination problem using widely discussed parallel and sequential strategies. We show the advantage of the latter in terms of better convergence with less quantum resources. Quantum channel discrimination with a variational quantum classifier (ii) allows one to operate even with random and mixed input states and simple variational circuits. The kernel-based classification approach (iii) is also found effective as it allows one to discriminate depolarizing channels associated not with just fixed values of the depolarization factor, but with ranges of it. Additionally, we discovered that a simple modification of one of the commonly used kernels significantly increases the efficiency of this approach. Finally, our numerical findings reveal that the performance of variational methods of channel discrimination depends on the trace of the product of the output states. These findings demonstrate that quantum machine learning can be used to discriminate channels, such as those representing physical noise processes.",
+    "authors": [
+      "Andrey Kardashin",
+      "Anna Vlasova",
+      "Anastasiia Pervishko",
+      "Dmitry Yudin",
+      "Jacob Biamonte"
+    ],
+    "categories": [
+      "quant-ph",
+      "cond-mat.dis-nn",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2022-06-20T18:00:05Z",
+    "updated_at": "2022-09-07T17:07:32Z",
+    "version": 2,
+    "doi": "10.1103/PhysRevA.106.032409",
+    "pdf_url": "https://arxiv.org/pdf/2206.09933v2"
+  },
+  {
+    "arxiv_id": "2309.10441",
+    "title": "Coreset selection can accelerate quantum machine learning models with provable generalization",
+    "abstract": "Quantum neural networks (QNNs) and quantum kernels stand as prominent figures in the realm of quantum machine learning, poised to leverage the nascent capabilities of near-term quantum computers to surmount classical machine learning challenges. Nonetheless, the training efficiency challenge poses a limitation on both QNNs and quantum kernels, curbing their efficacy when applied to extensive datasets. To confront this concern, we present a unified approach: coreset selection, aimed at expediting the training of QNNs and quantum kernels by distilling a judicious subset from the original training dataset. Furthermore, we analyze the generalization error bounds of QNNs and quantum kernels when trained on such coresets, unveiling the comparable performance with those training on the complete original dataset. Through systematic numerical simulations, we illuminate the potential of coreset selection in expediting tasks encompassing synthetic data classification, identification of quantum correlations, and quantum compiling. Our work offers a useful way to improve diverse quantum machine learning models with a theoretical guarantee while reducing the training cost.",
+    "authors": [
+      "Yiming Huang",
+      "Huiyuan Wang",
+      "Yuxuan Du",
+      "Xiao Yuan"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-09-19T08:59:46Z",
+    "updated_at": "2023-12-12T23:24:56Z",
+    "version": 2,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2309.10441v2"
+  },
+  {
+    "arxiv_id": "2405.08319",
+    "title": "Measurement-based quantum machine learning",
+    "abstract": "Quantum machine learning (QML) leverages quantum computing for classical inference, furnishes the processing of quantum data with machine-learning methods, and provides quantum algorithms adapted to noisy devices. Typically, QML proposals are framed in terms of the circuit model of quantum computation. The alternative measurement-based quantum computing (MBQC) paradigm can exhibit lower circuit depths, is naturally compatible with classical co-processing of mid-circuit measurements, and offers a promising avenue towards error correction. Despite significant progress on MBQC devices, QML in terms of MBQC has been hardly explored. We propose the multiple-triangle ansatz (MuTA), a universal quantum neural network assembled from MBQC neurons featuring bias engineering, monotonic expressivity, tunable entanglement, and scalable training. We numerically demonstrate that MuTA can learn a universal set of gates in the presence of noise, a quantum-state classifier, as well as a quantum instrument, and classify classical data using a quantum kernel tailored to MuTA. Finally, we incorporate hardware constraints imposed by photonic Gottesman-Kitaev-Preskill qubits. Our framework lays the foundation for versatile quantum neural networks native to MBQC, allowing to explore MBQC-specific algorithmic advantages and QML on MBQC devices.",
+    "authors": [
+      "Luis Mantilla Calderón",
+      "Robert Raussendorf",
+      "Polina Feldmann",
+      "Dmytro Bondarenko"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-05-14T05:17:01Z",
+    "updated_at": "2025-09-30T04:17:39Z",
+    "version": 2,
+    "doi": "10.1103/2snk-m8c6",
+    "pdf_url": "https://arxiv.org/pdf/2405.08319v2"
+  },
+  {
+    "arxiv_id": "2307.06937",
+    "title": "Dequantizing quantum machine learning models using tensor networks",
+    "abstract": "Ascertaining whether a classical model can efficiently replace a given quantum model -- dequantization -- is crucial in assessing the true potential of quantum algorithms. In this work, we introduced the dequantizability of the function class of variational quantum-machine-learning~(VQML) models by employing the tensor network formalism, effectively identifying every VQML model as a subclass of matrix product state (MPS) model characterized by constrained coefficient MPS and tensor product-based feature maps. From this formalism, we identify the conditions for which a VQML model's function class is dequantizable or not. Furthermore, we introduce an efficient quantum kernel-induced classical kernel which is as expressive as given any quantum kernel, hinting at a possible way to dequantize quantum kernel methods. This presents a thorough analysis of VQML models and demonstrates the versatility of our tensor-network formalism to properly distinguish VQML models according to their genuine quantum characteristics, thereby unifying classical and quantum machine-learning models within a single framework.",
+    "authors": [
+      "Seongwook Shin",
+      "Yong Siah Teo",
+      "Hyunseok Jeong"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-07-13T17:56:20Z",
+    "updated_at": "2023-12-21T14:50:23Z",
+    "version": 2,
+    "doi": "10.1103/PhysRevResearch.6.023218",
+    "pdf_url": "https://arxiv.org/pdf/2307.06937v2"
+  },
+  {
+    "arxiv_id": "2107.10541",
+    "title": "Qsun: an open-source platform towards practical quantum machine learning applications",
+    "abstract": "Currently, quantum hardware is restrained by noises and qubit numbers. Thus, a quantum virtual machine that simulates operations of a quantum computer on classical computers is a vital tool for developing and testing quantum algorithms before deploying them on real quantum computers. Various variational quantum algorithms have been proposed and tested on quantum virtual machines to surpass the limitations of quantum hardware. Our goal is to exploit further the variational quantum algorithms towards practical applications of quantum machine learning using state-of-the-art quantum computers. This paper first introduces our quantum virtual machine named Qsun, whose operation is underlined by quantum state wave-functions. The platform provides native tools supporting variational quantum algorithms. Especially using the parameter-shift rule, we implement quantum differentiable programming essential for gradient-based optimization. We then report two tests representative of quantum machine learning: quantum linear regression and quantum neural network.",
+    "authors": [
+      "Chuong Nguyen Quoc",
+      "Le Bin Ho",
+      "Lan Nguyen Tran",
+      "Hung Q. Nguyen"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-07-22T09:37:31Z",
+    "updated_at": "2022-03-01T04:03:30Z",
+    "version": 3,
+    "doi": "10.1088/2632-2153/ac5997",
+    "pdf_url": "https://arxiv.org/pdf/2107.10541v3"
+  },
+  {
+    "arxiv_id": "2611.09253",
+    "title": "Evaluation of Quantum Machine Learning Models for Network Anomaly Detection",
+    "abstract": "The proliferation of Internet-connected devices has intensified the risk of large-scale network intrusions, necessitating more advanced detection methodologies for the post quantum era. This work presents, to the best of our knowledge, a com- prehensive investigation of quantum machine learning (QML) for anomaly detection on the BoT-IoT dataset, a widely adopted benchmark for IoT security. Leveraging feature-engineered rep- resentations, we implement and evaluate four representative quantum classifiers: Quantum Support Vector Classification (QSVC), Quantum Neural Networks (QNN), and Variational Quantum Classifiers (VQC).",
+    "authors": [
+      "Swathi Chandrasekhar",
+      "Shiva Raj Pokhrel"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2026-11-06T10:12:55Z",
+    "updated_at": "2026-11-06T10:12:55Z",
+    "version": 1,
+    "doi": "10.1109/ICOIN68469.2026.11480629",
+    "pdf_url": "https://arxiv.org/pdf/2611.09253v1"
+  },
+  {
+    "arxiv_id": "2311.08990",
+    "title": "sQUlearn -- A Python Library for Quantum Machine Learning",
+    "abstract": "sQUlearn introduces a user-friendly, NISQ-ready Python library for quantum machine learning (QML), designed for seamless integration with classical machine learning tools like scikit-learn. The library's dual-layer architecture serves both QML researchers and practitioners, enabling efficient prototyping, experimentation, and pipelining. sQUlearn provides a comprehensive toolset that includes both quantum kernel methods and quantum neural networks, along with features like customizable data encoding strategies, automated execution handling, and specialized kernel regularization techniques. By focusing on NISQ-compatibility and end-to-end automation, sQUlearn aims to bridge the gap between current quantum computing capabilities and practical machine learning applications. The library provides substantial flexibility, enabling quick transitions between the underlying quantum frameworks Qiskit and PennyLane, as well as between simulation and running on actual hardware.",
+    "authors": [
+      "David A. Kreplin",
+      "Moritz Willmann",
+      "Jan Schnabel",
+      "Frederic Rapp",
+      "Manuel Hagelüken",
+      "Marco Roth"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-11-15T14:22:53Z",
+    "updated_at": "2024-04-19T09:21:46Z",
+    "version": 2,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2311.08990v2"
+  },
+  {
+    "arxiv_id": "2505.15902",
+    "title": "On Dequantization of Supervised Quantum Machine Learning via Random Fourier Features",
+    "abstract": "In the quest for quantum advantage, a central question is under what conditions can classical algorithms achieve a performance comparable to quantum algorithms--a concept known as dequantization. Random Fourier features (RFFs) have demonstrated potential for dequantizing certain quantum neural networks (QNNs) applied to regression tasks, but their applicability to other learning problems and architectures remained unexplored. In this work, we derive bounds on the true risk gap between classical RFF models and quantum models for regression and classification tasks with both QNN and quantum kernel architectures. Furthermore, we provide sufficient conditions under which this gap is small and thus the quantum system can be dequantized via the RFF method. We support our findings with numerical experiments that illustrate the practical dequantization of existing quantum kernel-based methods. Our findings not only broaden the applicability of RFF-dequantization but also enhance the understanding of potential quantum advantages in practical machine-learning tasks.",
+    "authors": [
+      "Mehrad Sahebi",
+      "Alice Barthe",
+      "Yudai Suzuki",
+      "Zoë Holmes",
+      "Michele Grossi"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-05-21T18:00:03Z",
+    "updated_at": "2025-12-19T14:49:02Z",
+    "version": 3,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.15902v3"
+  },
+  {
+    "arxiv_id": "2211.01383",
+    "title": "Pulse-efficient quantum machine learning",
+    "abstract": "Quantum machine learning algorithms based on parameterized quantum circuits are promising candidates for near-term quantum advantage. Although these algorithms are compatible with the current generation of quantum processors, device noise limits their performance, for example by inducing an exponential flattening of loss landscapes. Error suppression schemes such as dynamical decoupling and Pauli twirling alleviate this issue by reducing noise at the hardware level. A recent addition to this toolbox of techniques is pulse-efficient transpilation, which reduces circuit schedule duration by exploiting hardware-native cross-resonance interaction. In this work, we investigate the impact of pulse-efficient circuits on near-term algorithms for quantum machine learning. We report results for two standard experiments: binary classification on a synthetic dataset with quantum neural networks and handwritten digit recognition with quantum kernel estimation. In both cases, we find that pulse-efficient transpilation vastly reduces average circuit durations and, as a result, significantly improves classification accuracy. We conclude by applying pulse-efficient transpilation to the Hamiltonian Variational Ansatz and show that it delays the onset of noise-induced barren plateaus.",
+    "authors": [
+      "André Melo",
+      "Nathan Earnest-Noble",
+      "Francesco Tacchino"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2022-11-02T18:00:01Z",
+    "updated_at": "2023-10-05T10:34:34Z",
+    "version": 2,
+    "doi": "10.22331/q-2023-10-09-1130",
+    "pdf_url": "https://arxiv.org/pdf/2211.01383v2"
+  },
+  {
+    "arxiv_id": "2409.15645",
+    "title": "Quantum Machine Learning in Drug Discovery: Applications in Academia and Pharmaceutical Industries",
+    "abstract": "The nexus of quantum computing and machine learning - quantum machine learning - offers the potential for significant advancements in chemistry. This review specifically explores the potential of quantum neural networks on gate-based quantum computers within the context of drug discovery. We discuss the theoretical foundations of quantum machine learning, including data encoding, variational quantum circuits, and hybrid quantum-classical approaches. Applications to drug discovery are highlighted, including molecular property prediction and molecular generation. We provide a balanced perspective, emphasizing both the potential benefits and the challenges that must be addressed.",
+    "authors": [
+      "Anthony M. Smaldone",
+      "Yu Shee",
+      "Gregory W. Kyro",
+      "Chuzhi Xu",
+      "Nam P. Vu",
+      "Rishab Dutta",
+      "Marwa H. Farag",
+      "Alexey Galda",
+      "Sandeep Kumar",
+      "Elica Kyoseva",
+      "Victor S. Batista"
+    ],
+    "categories": [
+      "quant-ph",
+      "stat.ML"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-09-24T01:17:34Z",
+    "updated_at": "2024-09-24T01:17:34Z",
+    "version": 1,
+    "doi": "10.1021/acs.chemrev.4c00678",
+    "pdf_url": "https://arxiv.org/pdf/2409.15645v1"
+  },
+  {
+    "arxiv_id": "2412.19441",
+    "title": "Comparative Performance Analysis of Quantum Machine Learning Architectures for Credit Card Fraud Detection",
+    "abstract": "As financial fraud becomes increasingly complex, effective detection methods are essential. Quantum Machine Learning (QML) introduces certain capabilities that may enhance both accuracy and efficiency in this area. This study examines how different quantum feature maps and ansatz configurations affect the performance of three QML-based classifiers, the Variational Quantum Classifier (VQC), the Sampler Quantum Neural Network (SQNN), and the Estimator Quantum Neural Network (EQNN), when applied to two non-normalized financial fraud datasets. Different quantum feature map and ansatz configurations are evaluated, revealing distinct performance patterns. The VQC consistently demonstrates strong classification results, achieving an F1-score of 0.88, while the SQNN also delivers promising outcomes. In contrast, the EQNN struggles to produce robust results, emphasizing the challenges presented by non-standardized data. Statistical validation using ANOVA confirms the significance of observed performance differences. Additionally, robustness tests on the best-performing models under five quantum noise types show that they maintain competitive performance, supporting their practical applicability. These findings highlight the importance of careful model configuration in QML-based financial fraud detection. By showing how specific feature maps and ansatz choices influence predictive success, this work guides researchers and practitioners in refining QML approaches for complex financial applications.",
+    "authors": [
+      "Mansour El Alami",
+      "Nouhaila Innan",
+      "Muhammad Shafique",
+      "Mohamed Bennai"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-12-27T04:17:34Z",
+    "updated_at": "2026-01-14T08:20:11Z",
+    "version": 3,
+    "doi": "10.1007/s10489-026-07110-7",
+    "pdf_url": "https://arxiv.org/pdf/2412.19441v3"
+  },
+  {
+    "arxiv_id": "2308.05237",
+    "title": "Financial Fraud Detection: A Comparative Study of Quantum Machine Learning Models",
+    "abstract": "In this research, a comparative study of four Quantum Machine Learning (QML) models was conducted for fraud detection in finance. We proved that the Quantum Support Vector Classifier model achieved the highest performance, with F1 scores of 0.98 for fraud and non-fraud classes. Other models like the Variational Quantum Classifier, Estimator Quantum Neural Network (QNN), and Sampler QNN demonstrate promising results, propelling the potential of QML classification for financial applications. While they exhibit certain limitations, the insights attained pave the way for future enhancements and optimisation strategies. However, challenges exist, including the need for more efficient Quantum algorithms and larger and more complex datasets. The article provides solutions to overcome current limitations and contributes new insights to the field of Quantum Machine Learning in fraud detection, with important implications for its future development.",
+    "authors": [
+      "Nouhaila Innan",
+      "Muhammad Al-Zafar Khan",
+      "Mohamed Bennai"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG",
+      "q-fin.GN"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-08-09T21:47:50Z",
+    "updated_at": "2023-08-09T21:47:50Z",
+    "version": 1,
+    "doi": "10.1142/S0219749923500442",
+    "pdf_url": "https://arxiv.org/pdf/2308.05237v1"
+  },
+  {
+    "arxiv_id": "2407.12618",
+    "title": "A Brief Review of Quantum Machine Learning for Financial Services",
+    "abstract": "This review paper examines state-of-the-art algorithms and techniques in quantum machine learning with potential applications in finance. We discuss QML techniques in supervised learning tasks, such as Quantum Variational Classifiers, Quantum Kernel Estimation, and Quantum Neural Networks (QNNs), along with quantum generative AI techniques like Quantum Transformers and Quantum Graph Neural Networks (QGNNs). The financial applications considered include risk management, credit scoring, fraud detection, and stock price prediction. We also provide an overview of the challenges, potential, and limitations of QML, both in these specific areas and more broadly across the field. We hope that this can serve as a quick guide for data scientists, professionals in the financial sector, and enthusiasts in this area to understand why quantum computing and QML in particular could be interesting to explore in their field of expertise.",
+    "authors": [
+      "Mina Doosti",
+      "Petros Wallden",
+      "Conor Brian Hamill",
+      "Robert Hankache",
+      "Oliver Thomson Brown",
+      "Chris Heunen"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.CE"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-07-17T14:44:47Z",
+    "updated_at": "2024-07-17T14:44:47Z",
+    "version": 1,
+    "doi": "10.1088/2632-2153/ae51df",
+    "pdf_url": "https://arxiv.org/pdf/2407.12618v1"
+  },
+  {
+    "arxiv_id": "2505.05158",
+    "title": "A short review on qudit quantum machine learning",
+    "abstract": "As quantum devices scale toward practical machine learning applications, the binary qubit paradigm faces expressivity and resource efficiency limitations. Multi-level quantum systems, or qudits, offer a promising alternative by harnessing a larger Hilbert space, enabling richer data embeddings, more compact variational circuits, and support for multi-valued problem structures. In this work, we review the role of qudits in quantum machine learning techniques, mainly variational quantum algorithms and quantum neural networks. Drawing on recent experimental demonstrations, including high-level superconducting transmons, qutrit-based combinatorial optimization, and single-qudit classifiers, we highlight how qudit architectures can reduce circuit depth and parameter counts while maintaining competitive fidelity. We further assess the evolving software ecosystem, from specialized simulators and differentiable-programming libraries to extensions of mainstream frameworks. We also identify key challenges in control complexity, noise management, and tooling maturity.",
+    "authors": [
+      "Tiago de Souza Farias",
+      "Lucas Friedrich",
+      "Jonas Maziero"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-05-08T11:54:06Z",
+    "updated_at": "2025-05-08T11:54:06Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.05158v1"
+  },
+  {
+    "arxiv_id": "2311.11362",
+    "title": "Symmetry-invariant quantum machine learning force fields",
+    "abstract": "Machine learning techniques are essential tools to compute efficient, yet accurate, force fields for atomistic simulations. This approach has recently been extended to incorporate quantum computational methods, making use of variational quantum learning models to predict potential energy surfaces and atomic forces from ab initio training data. However, the trainability and scalability of such models are still limited, due to both theoretical and practical barriers. Inspired by recent developments in geometric classical and quantum machine learning, here we design quantum neural networks that explicitly incorporate, as a data-inspired prior, an extensive set of physically relevant symmetries. We find that our invariant quantum learning models outperform their more generic counterparts on individual molecules of growing complexity. Furthermore, we study a water dimer as a minimal example of a system with multiple components, showcasing the versatility of our proposed approach and opening the way towards larger simulations. Our results suggest that molecular force fields generation can significantly profit from leveraging the framework of geometric quantum machine learning, and that chemical systems represent, in fact, an interesting and rich playground for the development and application of advanced quantum machine learning tools.",
+    "authors": [
+      "Isabel Nha Minh Le",
+      "Oriel Kiss",
+      "Julian Schuhmacher",
+      "Ivano Tavernelli",
+      "Francesco Tacchino"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG",
+      "physics.chem-ph",
+      "physics.comp-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-11-19T16:15:53Z",
+    "updated_at": "2023-11-19T16:15:53Z",
+    "version": 1,
+    "doi": "10.1088/1367-2630/adad0c",
+    "pdf_url": "https://arxiv.org/pdf/2311.11362v1"
+  },
+  {
+    "arxiv_id": "2602.20352",
+    "title": "Quantum Machine Learning for Complex Systems",
+    "abstract": "Quantum machine learning (QML) is rapidly transitioning from theoretical promise to practical relevance across data-intensive scientific domains. In this Review, we provide a structured overview of recent advances that bridge foundational quantum learning principles with real-world applications. We survey foundational QML paradigms, including variational quantum algorithms, quantum kernel methods, and neural-network quantum states, with emphasis on their applicability to complex quantum systems. We examine neural-network quantum states as expressive variational models for correlated matter, non-equilibrium dynamics, and open quantum systems, and discuss fundamental challenges associated with training and sampling. Recent advances in quantum-enhanced sampling and diagnostics of learning dynamics, including information-theoretic tools, are reviewed as mechanisms for improving scalability and trainability. The Review further highlights application-driven QML frameworks in drug discovery, cancer biology, and agro-climate modeling, where data complexity and constraints motivate hybrid quantum-classical approaches. We conclude with a discussion of federated quantum machine learning as a route to distributed, privacy-preserving quantum intelligence. Overall, this Review presents a unified perspective on the opportunities and limitations of QML for complex systems.",
+    "authors": [
+      "Vinit Singh",
+      "Amandeep Singh Bhatia",
+      "Mandeep Kaur Saggi",
+      "Manas Sajjan",
+      "Sabre Kais"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2026-02-23T20:54:08Z",
+    "updated_at": "2026-02-23T20:54:08Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.20352v1"
+  },
+  {
+    "arxiv_id": "2412.11356",
+    "title": "The Stabilizer Bootstrap of Quantum Machine Learning with up to 10000 qubits",
+    "abstract": "Quantum machine learning is considered one of the flagship applications of quantum computers, where variational quantum circuits could be the leading paradigm both in the near-term quantum devices and the early fault-tolerant quantum computers. However, it is not clear how to identify the regime of quantum advantages from these circuits, and there is no explicit theory to guide the practical design of variational ansatze to achieve better performance. We address these challenges with the stabilizer bootstrap, a method that uses stabilizer-based techniques to optimize quantum neural networks before their quantum execution, together with theoretical proofs and high-performance computing with 10000 qubits or random datasets up to 1000 data. We find that, in a general setup of variational ansatze, the possibility of improvements from the stabilizer bootstrap depends on the structure of the observables and the size of the datasets. The results reveal that configurations exhibit two distinct behaviors: some maintain a constant probability of circuit improvement, while others show an exponential decay in improvement probability as qubit numbers increase. These patterns are termed strong stabilizer enhancement and weak stabilizer enhancement, respectively, with most situations falling in between. Our work seamlessly bridges techniques from fault-tolerant quantum computing with applications of variational quantum algorithms. Not only does it offer practical insights for designing variational circuits tailored to large-scale machine learning challenges, but it also maps out a clear trajectory for defining the boundaries of feasible and practical quantum advantages.",
+    "authors": [
+      "Yuqing Li",
+      "Jinglei Cheng",
+      "Xulong Tang",
+      "Youtao Zhang",
+      "Frederic T. Chong",
+      "Junyu Liu"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-12-16T01:12:00Z",
+    "updated_at": "2024-12-16T01:12:00Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2412.11356v1"
+  },
+  {
+    "arxiv_id": "2510.06563",
+    "title": "Adapting Quantum Machine Learning for Energy Dissociation of Bonds",
+    "abstract": "Accurate prediction of bond dissociation energies (BDEs) underpins mechanistic insight and the rational design of molecules and materials. We present a systematic, reproducible benchmark comparing quantum and classical machine learning models for BDE prediction using a chemically curated feature set encompassing atomic properties (atomic numbers, hybridization), bond characteristics (bond order, type), and local environmental descriptors. Our quantum framework, implemented in Qiskit Aer on six qubits, employs ZZFeatureMap encodings with variational ansatz (RealAmplitudes) across multiple architectures Variational Quantum Regressors (VQR), Quantum Support Vector Regressors (QSVR), Quantum Neural Networks (QNN), Quantum Convolutional Neural Networks (QCNN), and Quantum Random Forests (QRF). These are rigorously benchmarked against strong classical baselines, including Support Vector Regression (SVR), Random Forests (RF), and Multi-Layer Perceptrons (MLP). Comprehensive evaluation spanning absolute and relative error metrics, threshold accuracies, and error distributions shows that top-performing quantum models (QCNN, QRF) match the predictive accuracy and robustness of classical ensembles and deep networks, particularly within the chemically prevalent mid-range BDE regime. These findings establish a transparent baseline for quantum-enhanced molecular property prediction and outline a practical foundation for advancing quantum computational chemistry toward near chemical accuracy.",
+    "authors": [
+      "Swathi Chandrasekhar",
+      "Shiva Raj Pokhrel",
+      "Navneet Singh"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-10-08T01:32:26Z",
+    "updated_at": "2025-10-08T01:32:26Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.06563v1"
+  },
+  {
+    "arxiv_id": "2110.14753",
+    "title": "Subtleties in the trainability of quantum machine learning models",
+    "abstract": "A new paradigm for data science has emerged, with quantum data, quantum models, and quantum computational devices. This field, called Quantum Machine Learning (QML), aims to achieve a speedup over traditional machine learning for data analysis. However, its success usually hinges on efficiently training the parameters in quantum neural networks, and the field of QML is still lacking theoretical scaling results for their trainability. Some trainability results have been proven for a closely related field called Variational Quantum Algorithms (VQAs). While both fields involve training a parametrized quantum circuit, there are crucial differences that make the results for one setting not readily applicable to the other. In this work we bridge the two frameworks and show that gradient scaling results for VQAs can also be applied to study the gradient scaling of QML models. Our results indicate that features deemed detrimental for VQA trainability can also lead to issues such as barren plateaus in QML. Consequently, our work has implications for several QML proposals in the literature. In addition, we provide theoretical and numerical evidence that QML models exhibit further trainability issues not present in VQAs, arising from the use of a training dataset. We refer to these as dataset-induced barren plateaus. These results are most relevant when dealing with classical data, as here the choice of embedding scheme (i.e., the map between classical data and quantum states) can greatly affect the gradient scaling.",
+    "authors": [
+      "Supanut Thanasilp",
+      "Samson Wang",
+      "Nhat A. Nghiem",
+      "Patrick J. Coles",
+      "M. Cerezo"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-10-27T20:28:53Z",
+    "updated_at": "2021-10-27T20:28:53Z",
+    "version": 1,
+    "doi": "10.1007/s42484-023-00103-6",
+    "pdf_url": "https://arxiv.org/pdf/2110.14753v1"
+  },
+  {
+    "arxiv_id": "2109.03400",
+    "title": "Entangled Datasets for Quantum Machine Learning",
+    "abstract": "High-quality, large-scale datasets have played a crucial role in the development and success of classical machine learning. Quantum Machine Learning (QML) is a new field that aims to use quantum computers for data analysis, with the hope of obtaining a quantum advantage of some sort. While most proposed QML architectures are benchmarked using classical datasets, there is still doubt whether QML on classical datasets will achieve such an advantage. In this work, we argue that one should instead employ quantum datasets composed of quantum states. For this purpose, we introduce the NTangled dataset composed of quantum states with different amounts and types of multipartite entanglement. We first show how a quantum neural network can be trained to generate the states in the NTangled dataset. Then, we use the NTangled dataset to benchmark QML models for supervised learning classification tasks. We also consider an alternative entanglement-based dataset, which is scalable and is composed of states prepared by quantum circuits with different depths. As a byproduct of our results, we introduce a novel method for generating multipartite entangled states, providing a use-case of quantum neural networks for quantum entanglement theory.",
+    "authors": [
+      "Louis Schatzki",
+      "Andrew Arrasmith",
+      "Patrick J. Coles",
+      "M. Cerezo"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-09-08T02:20:13Z",
+    "updated_at": "2021-11-18T04:58:13Z",
+    "version": 2,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2109.03400v2"
+  },
+  {
+    "arxiv_id": "2512.15286",
+    "title": "Quantum Machine Learning for Cybersecurity: A Taxonomy and Future Directions",
+    "abstract": "The increasing number of cyber threats and rapidly evolving tactics, as well as the high volume of data in recent years, have caused classical machine learning, rules, and signature-based defence strategies to fail, rendering them unable to keep up. An alternative, Quantum Machine Learning (QML), has recently emerged, making use of computations based on quantum mechanics. It offers better encoding and processing of high-dimensional structures for certain problems. This survey provides a comprehensive overview of QML techniques relevant to the domain of security, such as Quantum Neural Networks (QNNs), Quantum Support Vector Machines (QSVMs), Variational Quantum Circuits (VQCs), and Quantum Generative Adversarial Networks (QGANs), and discusses the contributions of this paper in relation to existing research in the field and how it improves over them. It also maps these methods across supervised, unsupervised, and generative learning paradigms, and to core cybersecurity tasks, including intrusion and anomaly detection, malware and botnet classification, and encrypted-traffic analytics. It also discusses their application in the domain of cloud computing security, where QML can enhance secure and scalable operations. Many limitations of QML in the domain of cybersecurity have also been discussed, along with the directions for addressing them.",
+    "authors": [
+      "Siva Sai",
+      "Ishika Goyal",
+      "Shubham Sharma",
+      "Sri Harshita Manuri",
+      "Vinay Chamola",
+      "Rajkumar Buyya"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "primary_category": "cs.LG",
+    "published_at": "2025-12-17T10:39:14Z",
+    "updated_at": "2025-12-17T10:39:14Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.15286v1"
+  },
+  {
+    "arxiv_id": "2103.12010",
+    "title": "Federated Quantum Machine Learning",
+    "abstract": "Distributed training across several quantum computers could significantly improve the training time and if we could share the learned model, not the data, it could potentially improve the data privacy as the training would happen where the data is located. However, to the best of our knowledge, no work has been done in quantum machine learning (QML) in federation setting yet. In this work, we present the federated training on hybrid quantum-classical machine learning models although our framework could be generalized to pure quantum machine learning model. Specifically, we consider the quantum neural network (QNN) coupled with classical pre-trained convolutional model. Our distributed federated learning scheme demonstrated almost the same level of trained model accuracies and yet significantly faster distributed training. It demonstrates a promising future research direction for scaling and privacy aspects.",
+    "authors": [
+      "Samuel Yen-Chi Chen",
+      "Shinjae Yoo"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.CR",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-03-22T17:00:19Z",
+    "updated_at": "2021-03-22T17:00:19Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2103.12010v1"
+  },
+  {
+    "arxiv_id": "2111.05451",
+    "title": "Importance of Kernel Bandwidth in Quantum Machine Learning",
+    "abstract": "Quantum kernel methods are considered a promising avenue for applying quantum computers to machine learning problems. Identifying hyperparameters controlling the inductive bias of quantum machine learning models is expected to be crucial given the central role hyperparameters play in determining the performance of classical machine learning methods. In this work we introduce the hyperparameter controlling the bandwidth of a quantum kernel and show that it controls the expressivity of the resulting model. We use extensive numerical experiments with multiple quantum kernels and classical datasets to show consistent change in the model behavior from underfitting (bandwidth too large) to overfitting (bandwidth too small), with optimal generalization in between. We draw a connection between the bandwidth of classical and quantum kernels and show analogous behavior in both cases. Furthermore, we show that optimizing the bandwidth can help mitigate the exponential decay of kernel values with qubit count, which is the cause behind recent observations that the performance of quantum kernel methods decreases with qubit count. We reproduce these negative results and show that if the kernel bandwidth is optimized, the performance instead improves with growing qubit count and becomes competitive with the best classical methods.",
+    "authors": [
+      "Ruslan Shaydulin",
+      "Stefan M. Wild"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-11-09T23:23:23Z",
+    "updated_at": "2022-09-28T14:40:29Z",
+    "version": 4,
+    "doi": "10.1103/PhysRevA.106.042407",
+    "pdf_url": "https://arxiv.org/pdf/2111.05451v4"
+  },
+  {
+    "arxiv_id": "2304.09224",
+    "title": "Quantum machine learning for image classification",
+    "abstract": "Image classification, a pivotal task in multiple industries, faces computational challenges due to the burgeoning volume of visual data. This research addresses these challenges by introducing two quantum machine learning models that leverage the principles of quantum mechanics for effective computations. Our first model, a hybrid quantum neural network with parallel quantum circuits, enables the execution of computations even in the noisy intermediate-scale quantum era, where circuits with a large number of qubits are currently infeasible. This model demonstrated a record-breaking classification accuracy of 99.21% on the full MNIST dataset, surpassing the performance of known quantum-classical models, while having eight times fewer parameters than its classical counterpart. Also, the results of testing this hybrid model on a Medical MNIST (classification accuracy over 99%), and on CIFAR-10 (classification accuracy over 82%), can serve as evidence of the generalizability of the model and highlights the efficiency of quantum layers in distinguishing common features of input data. Our second model introduces a hybrid quantum neural network with a Quanvolutional layer, reducing image resolution via a convolution process. The model matches the performance of its classical counterpart, having four times fewer trainable parameters, and outperforms a classical model with equal weight parameters. These models represent advancements in quantum machine learning research and illuminate the path towards more accurate image classification systems.",
+    "authors": [
+      "Arsenii Senokosov",
+      "Alexandr Sedykh",
+      "Asel Sagingalieva",
+      "Basil Kyriacou",
+      "Alexey Melnikov"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-04-18T18:23:20Z",
+    "updated_at": "2024-03-28T17:36:50Z",
+    "version": 2,
+    "doi": "10.1088/2632-2153/ad2aef",
+    "pdf_url": "https://arxiv.org/pdf/2304.09224v2"
+  },
+  {
+    "arxiv_id": "2506.21842",
+    "title": "Adversarial Threats in Quantum Machine Learning: A Survey of Attacks and Defenses",
+    "abstract": "Quantum Machine Learning (QML) integrates quantum computing with classical machine learning, primarily to solve classification, regression and generative tasks. However, its rapid development raises critical security challenges in the Noisy Intermediate-Scale Quantum (NISQ) era. This chapter examines adversarial threats unique to QML systems, focusing on vulnerabilities in cloud-based deployments, hybrid architectures, and quantum generative models. Key attack vectors include model stealing via transpilation or output extraction, data poisoning through quantum-specific perturbations, reverse engineering of proprietary variational quantum circuits, and backdoor attacks. Adversaries exploit noise-prone quantum hardware and insufficiently secured QML-as-a-Service (QMLaaS) workflows to compromise model integrity, ownership, and functionality. Defense mechanisms leverage quantum properties to counter these threats. Noise signatures from training hardware act as non-invasive watermarks, while hardware-aware obfuscation techniques and ensemble strategies disrupt cloning attempts. Emerging solutions also adapt classical adversarial training and differential privacy to quantum settings, addressing vulnerabilities in quantum neural networks and generative architectures. However, securing QML requires addressing open challenges such as balancing noise levels for reliability and security, mitigating cross-platform attacks, and developing quantum-classical trust frameworks. This chapter summarizes recent advances in attacks and defenses, offering a roadmap for researchers and practitioners to build robust, trustworthy QML systems resilient to evolving adversarial landscapes.",
+    "authors": [
+      "Archisman Ghosh",
+      "Satwik Kundu",
+      "Swaroop Ghosh"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-06-27T01:19:49Z",
+    "updated_at": "2025-06-27T01:19:49Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2506.21842v1"
+  },
+  {
+    "arxiv_id": "2610.32762",
+    "title": "Quantum Machine Learning in Medical Imaging: A Primer for Radiologists",
+    "abstract": "Deep learning has transformed radiology, but the computational cost of training and deploying modern models is outpacing what classical hardware can support. Quantum computing has been proposed as one response to this bottleneck: an n-qubit system can represent $2^n$ states simultaneously, although practical speedups require efficient algorithms, data encoding, and measurement strategies rather than superposition alone. This review introduces radiologists to five core quantum concepts, qubits, superposition, entanglement, quantum gates, and quantum circuits, and to the superconducting, trapped-ion, and photonic hardware platforms that define the current noisy intermediate-scale quantum (NISQ) era. We then summarize the quantum machine learning architectures most often applied to medical imaging (quantum support vector machines, quantum neural networks, variational quantum circuits, and quantum convolutional neural networks) and quantum image representations such as the flexible representation of quantum images (FRQI) and the novel enhanced quantum representation (NEQR). Reported applications include brain tumor classification and segmentation on MRI, pneumonia detection on chest radiographs, skin and breast lesion classification, CT and PET reconstruction, and ultrasound denoising. Nearly all published systems are hybrid quantum-classical pipelines evaluated on small, downsampled benchmark datasets or simulators, and clinical deployment is not yet feasible. We conclude with current limitations and translational priorities for radiology.",
+    "authors": [
+      "Ruben Ortiz Cordero",
+      "Gaven K. Smart",
+      "Harshada Gothankar",
+      "Emilio Supsupin",
+      "Priya Bhosale",
+      "Mayur Virarkar"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2026-10-23T15:04:34Z",
+    "updated_at": "2026-10-23T15:04:34Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.32762v1"
+  },
+  {
+    "arxiv_id": "2304.13142",
+    "title": "Quantum Machine Learning Approach for the Prediction of Surface Roughness in Additive Manufactured Specimens",
+    "abstract": "Surface roughness is a crucial factor influencing the performance and functionality of additive manufactured components. Accurate prediction of surface roughness is vital for optimizing manufacturing processes and ensuring the quality of the final product. Quantum computing has recently gained attention as a potential solution for tackling complex problems and creating precise predictive models. In this research paper, we conduct an in-depth comparison of three quantum algorithms i.e. the Quantum Neural Network (QNN), Quantum Forest (Q-Forest), and Variational Quantum Classifier (VQC) adapted for regression for predicting surface roughness in additive manufactured specimens for the first time. We assess the algorithms performance using Mean Squared Error (MSE), Mean Absolute Error (MAE), and Explained Variance Score (EVS) as evaluation metrics. Our findings show that the Q-Forest algorithm surpasses the other algorithms, achieving an MSE of 56.905, MAE of 7.479, and an EVS of 0.2957. In contrast, the QNN algorithm displays a higher MSE of 60.840 and MAE of 7.671, coupled with a negative EVS of -0.444, indicating that it may not be appropriate for predicting surface roughness in this application. The VQC adapted for regression exhibits an MSE of 59.121, MAE of 7.597, and an EVS of -0.0106, suggesting its performance is also inferior to the Q-Forest algorithm.",
+    "authors": [
+      "Akshansh Mishra",
+      "Vijaykumar S. Jatti"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.LG",
+      "math.QA"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-04-24T11:57:10Z",
+    "updated_at": "2023-04-24T11:57:10Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2304.13142v1"
+  },
+  {
+    "arxiv_id": "2205.06217",
+    "title": "Exploiting symmetry in variational quantum machine learning",
+    "abstract": "Variational quantum machine learning is an extensively studied application of near-term quantum computers. The success of variational quantum learning models crucially depends on finding a suitable parametrization of the model that encodes an inductive bias relevant to the learning task. However, precious little is known about guiding principles for the construction of suitable parametrizations. In this work, we holistically explore when and how symmetries of the learning problem can be exploited to construct quantum learning models with outcomes invariant under the symmetry of the learning task. Building on tools from representation theory, we show how a standard gateset can be transformed into an equivariant gateset that respects the symmetries of the problem at hand through a process of gate symmetrization. We benchmark the proposed methods on two toy problems that feature a non-trivial symmetry and observe a substantial increase in generalization performance. As our tools can also be applied in a straightforward way to other variational problems with symmetric structure, we show how equivariant gatesets can be used in variational quantum eigensolvers.",
+    "authors": [
+      "Johannes Jakob Meyer",
+      "Marian Mularski",
+      "Elies Gil-Fuster",
+      "Antonio Anna Mele",
+      "Francesco Arzani",
+      "Alissa Wilms",
+      "Jens Eisert"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2022-05-12T17:01:41Z",
+    "updated_at": "2022-05-12T17:01:41Z",
+    "version": 1,
+    "doi": "10.1103/PRXQuantum.4.010328",
+    "pdf_url": "https://arxiv.org/pdf/2205.06217v1"
+  },
+  {
+    "arxiv_id": "2405.01780",
+    "title": "Quantum Machine Learning: Quantum Kernel Methods",
+    "abstract": "Quantum algorithms based on quantum kernel methods have been investigated previously [1]. A quantum advantage is derived from the fact that it is possible to construct a family of datasets for which, only quantum processing can recognise the intrinsic labelling patterns, while for classical computers the dataset looks like noise. This is due to the algorithm leveraging inherent efficiencies in the computation of logarithms in a cyclic group. The discrete log problem.is a well-known advantage of quantum vs classical computation: where it is possible to generate all the members of the group using a single mathematical operation. Kernel methods are a powerful and popular technique in classical Machine Learning. The use of a quantum feature space that can only be calculated efficiently on a quantum computer potentially allows for deriving a quantum advantage. In this paper, we intend to first describe the application of such a kernel method to a Quantum version of the classical Support Vector Machine (SVM) algorithm to identify conditions under which, a quantum advantage is realised. A data dependent projected quantum kernel was shown to provide significant advantage over classical kernels. Further, we present results of investigations and ideas pertaining to extending the use of quantum kernels as a feature extraction layer in a Convolutional Neural Networks (CNN) that is a widely used architecture in deep-learning applications.",
+    "authors": [
+      "Sanjeev Naguleswaran"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-05-02T23:45:29Z",
+    "updated_at": "2024-05-02T23:45:29Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2405.01780v1"
+  },
+  {
+    "arxiv_id": "2112.02655",
+    "title": "Quantum Machine Learning for Radio Astronomy",
+    "abstract": "In this work we introduce a novel approach to the pulsar classification problem in time-domain radio astronomy using a Born machine, often referred to as a quantum neural network. Using a single-qubit architecture, we show that the pulsar classification problem maps well to the Bloch sphere and that comparable accuracies to more classical machine learning approaches are achievable. We introduce a novel single-qubit encoding for the pulsar data used in this work and show that this performs comparably to a multi-qubit QAOA encoding.",
+    "authors": [
+      "Mohammad Kordzanganeh",
+      "Aydin Utting",
+      "Anna Scaife"
+    ],
+    "categories": [
+      "quant-ph",
+      "astro-ph.HE",
+      "stat.ML"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-12-05T19:05:08Z",
+    "updated_at": "2021-12-09T20:42:20Z",
+    "version": 2,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2112.02655v2"
+  },
+  {
+    "arxiv_id": "2603.09645",
+    "title": "Noise Models Impacts and Mitigation Strategies in Photonic Quantum Machine Learning",
+    "abstract": "Photonic Quantum Machine Learning (PQML) is an emerging method to implement scalable, energy-efficient quantum information processing by combining photonic quantum computing technologies with machine learning techniques. The features of photonic technologies offer several benefits: room-temperature operation; fast (low delay) processing of signals; and the possibility of representing computations in high-dimensional (Hilbert) spaces. This makes photonic technologies a good candidate for the near-term development of quantum devices. However, noise is still a major limiting factor for the performance, reliability, and scalability of PQML implementations. This review provides a detailed and systematic analysis of the sources of noise that will affect PQML implementations. We will present an overview of the principal photonic quantum computer designs and summarize the many different types of quantum machine learning algorithms that have been successfully implemented using photonic quantum computer architectures such as variational quantum circuits, quantum neural networks, and quantum support vector machines. We identify and categorize the primary sources of noise within photonic quantum systems and how these sources of noise behave algorithm-specifically with respect to degrading the accuracy of learning, unstable training, and slower convergence than expected. Additionally, we review traditional and advanced techniques for characterizing noise and provide an extensive survey of strategies for mitigating the effects of noise on learning performance. Finally, we discuss recent advances that demonstrate PQML's capability to operate in real-world settings with realistic noise conditions and future obstacles that will challenge the use of PQML as an effective quantum processing platform.",
+    "authors": [
+      "A. M. A. S. D. Alagiyawanna",
+      "Asoka Karunananda"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2026-03-10T13:21:23Z",
+    "updated_at": "2026-04-04T09:08:02Z",
+    "version": 3,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.09645v3"
+  },
+  {
+    "arxiv_id": "2306.13461",
+    "title": "Understanding quantum machine learning also requires rethinking generalization",
+    "abstract": "Quantum machine learning models have shown successful generalization performance even when trained with few data. In this work, through systematic randomization experiments, we show that traditional approaches to understanding generalization fail to explain the behavior of such quantum models. Our experiments reveal that state-of-the-art quantum neural networks accurately fit random states and random labeling of training data. This ability to memorize random data defies current notions of small generalization error, problematizing approaches that build on complexity measures such as the VC dimension, the Rademacher complexity, and all their uniform relatives. We complement our empirical results with a theoretical construction showing that quantum neural networks can fit arbitrary labels to quantum states, hinting at their memorization ability. Our results do not preclude the possibility of good generalization with few training data but rather rule out any possible guarantees based only on the properties of the model family. These findings expose a fundamental challenge in the conventional understanding of generalization in quantum machine learning and highlight the need for a paradigm shift in the study of quantum models for machine learning tasks.",
+    "authors": [
+      "Elies Gil-Fuster",
+      "Jens Eisert",
+      "Carlos Bravo-Prieto"
+    ],
+    "categories": [
+      "quant-ph",
+      "cond-mat.quant-gas",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-06-23T12:04:13Z",
+    "updated_at": "2024-02-12T16:30:54Z",
+    "version": 2,
+    "doi": "10.1038/s41467-024-45882-z",
+    "pdf_url": "https://arxiv.org/pdf/2306.13461v2"
+  },
+  {
+    "arxiv_id": "2407.06226",
+    "title": "Quantum Machine Learning with Application to Progressive Supranuclear Palsy Network Classification",
+    "abstract": "Machine learning and quantum computing are being progressively explored to shed light on possible computational approaches to deal with hitherto unsolvable problems. Classical methods for machine learning are ubiquitous in pattern recognition, with support vector machines (SVMs) being a prominent technique for network classification. However, there are limitations to the successful resolution of such classification instances when the input feature space becomes large, and the successive evaluation of so-called kernel functions becomes computationally exorbitant. The use of principal component analysis (PCA) substantially minimizes the dimensionality of feature space thereby enabling computational speed-ups of supervised learning: the creation of a classifier. Further, the application of quantum-based learning to the PCA reduced input feature space might offer an exponential speedup with fewer parameters. The present learning model is evaluated on a real clinical application: the diagnosis of Progressive Supranuclear Palsy (PSP) disorder. The results suggest that quantum machine learning has led to noticeable advancement and outperforms classical frameworks. The optimized variational quantum classifier classifies the PSP dataset with 86% accuracy as compared to conventional SVM. The other technique, a quantum kernel estimator, approximates the kernel function on the quantum machine and optimizes a classical SVM. In particular, we have demonstrated the successful application of the present model on both a quantum simulator and real chips of the IBM quantum platform.",
+    "authors": [
+      "Papri Saha"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-07-06T14:16:31Z",
+    "updated_at": "2024-07-06T14:16:31Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2407.06226v1"
+  },
+  {
+    "arxiv_id": "2303.09491",
+    "title": "Challenges and Opportunities in Quantum Machine Learning",
+    "abstract": "At the intersection of machine learning and quantum computing, Quantum Machine Learning (QML) has the potential of accelerating data analysis, especially for quantum data, with applications for quantum materials, biochemistry, and high-energy physics. Nevertheless, challenges remain regarding the trainability of QML models. Here we review current methods and applications for QML. We highlight differences between quantum and classical machine learning, with a focus on quantum neural networks and quantum deep learning. Finally, we discuss opportunities for quantum advantage with QML.",
+    "authors": [
+      "M. Cerezo",
+      "Guillaume Verdon",
+      "Hsin-Yuan Huang",
+      "Lukasz Cincio",
+      "Patrick J. Coles"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2023-03-16T17:10:39Z",
+    "updated_at": "2023-03-16T17:10:39Z",
+    "version": 1,
+    "doi": "10.1038/s43588-022-00311-3",
+    "pdf_url": "https://arxiv.org/pdf/2303.09491v1"
+  },
+  {
+    "arxiv_id": "2606.14822",
+    "title": "Quantum Machine Learning for Industrial Applications",
+    "abstract": "Recent advances in Machine Learning have transformed numerous industrial sectors, yet classical paradigms face fundamental limitations: rapidly growing data volumes, rising computational costs, significant energy consumption, and the physical scaling limits of conventional hardware architectures. Quantum computing has emerged as a promising computational paradigm to address these challenges, giving rise to the field of Quantum Machine Learning (QML). In this thesis, the theoretical foundations of QML are investigated, with a focus on near-term and future practical applications. Three central challenges are addressed: the trainability of variational quantum circuits, their expressivity, and their resistance to efficient classical simulation. The trainability of Hamming-weight preserving variational quantum circuits is first studied, and theoretical guarantees are established that resolve an open conjecture on the absence of barren plateaus for this circuit family. Subspace-preserving QML algorithms are then introduced, including photonic circuits and quantum convolutional neural networks, and are designed to mimic classical ML subroutines while offering polynomial quantum advantage. Finally, variational quantum circuits are analyzed as quantum Fourier models, and a framework is derived to jointly characterize expressivity and trainability, from which conditions are obtained under which quantum models provably separate from their classical counterparts. These contributions are intended to advance the theoretical roadmap for harnessing near-term and future quantum technologies in real-world applications.",
+    "authors": [
+      "Léo Monbroussou"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2026-06-12T12:45:00Z",
+    "updated_at": "2026-06-12T12:45:00Z",
+    "version": 1,
+    "doi": "10.70675/78b65d31z6c74z4ccfz8ce3zdbde6bf748e9",
+    "pdf_url": "https://arxiv.org/pdf/2606.14822v1"
+  },
+  {
+    "arxiv_id": "2408.10274",
+    "title": "Benchmarking quantum machine learning kernel training for classification tasks",
+    "abstract": "Quantum-enhanced machine learning is a rapidly evolving field that aims to leverage the unique properties of quantum mechanics to enhance classical machine learning. However, the practical applicability of these methods remains an open question, particularly beyond the context of specifically-crafted toy problems, and given the current limitations of quantum hardware. This study focuses on quantum kernel methods in the context of classification tasks. In particular, it examines the performance of Quantum Kernel Estimation (QKE) and Quantum Kernel Training (QKT) in connection with two quantum feature mappings, namely ZZFeatureMap and CovariantFeatureMap. Remarkably, these feature maps have been proposed in the literature under the conjecture of possible near-term quantum advantage and have shown promising performance in ad-hoc datasets. In this study, we aim to evaluate their versatility and generalization capabilities in a more general benchmark, encompassing both artificial and established reference datasets. Classical machine learning methods, specifically Support Vector Machines (SVMs) and logistic regression, are also incorporated as baseline comparisons. Experimental results indicate that quantum methods exhibit varying performance across different datasets. Despite outperforming classical methods in ad-hoc datasets, mixed results are obtained for the general case among standard classical benchmarks. Our experiments call into question a general added value of applying QKT optimization, for which the additional computational cost does not necessarily translate into improved classification performance. Instead, it is suggested that a careful choice of the quantum feature map in connection with proper hyperparameterization may prove more effective.",
+    "authors": [
+      "Diego Alvarez-Estevez"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-08-17T10:53:06Z",
+    "updated_at": "2025-01-16T12:45:17Z",
+    "version": 2,
+    "doi": "10.1109/TQE.2025.3541882",
+    "pdf_url": "https://arxiv.org/pdf/2408.10274v2"
+  },
+  {
+    "arxiv_id": "2510.07055",
+    "title": "Potential of multi-anomalies detection using quantum machine learning",
+    "abstract": "Maintenance of production equipment is critical in manufacturing. Typically, machine learning models are trained on sensor data closely attached to equipment. However, as the number of machines increases, computational cost grows rapidly. In practice, anomalies are often identified by human operators through auditory perception, relying heavily on experience and intuition. In vibration analysis, especially, AR model coefficients combined with one-class SVMs are used for detecting anomalies. In this work, we explore the effect of substituting the classical kernel in the one-class SVM with a quantum kernel. Two experimental setups were used. The first involved a miniature racing car track, where the car passes over a patch of hook-and-loop fastener to generate abnormal sounds, which are recorded using a microphone. The second involved an open-belt drive, where chopsticks are inserted at specific times to produce crushing sounds, simulating sudden anomalies. Our results show a clear advantage of quantum kernels over classical Gaussian (RBF) kernels. On the miniature car track dataset, the quantum kernel achieved an accuracy and F1-score of 0.82, compared to 0.64 and 0.39 respectively for the RBF kernel. For the crushing device, the quantum kernel achieved perfect accuracy and F1-score (1.00), while the RBF kernel reached only 0.64 accuracy and 0.43 F1-score. These findings suggest that quantum kernels enhance the classification accuracy for diverse types of abnormal sound patterns, including both periodic and impulsive anomalies.",
+    "authors": [
+      "Takao Tomono",
+      "Kazuya Tsujimura"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-10-08T14:24:14Z",
+    "updated_at": "2025-10-08T14:24:14Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.07055v1"
+  },
+  {
+    "arxiv_id": "2605.16067",
+    "title": "SAFE Quantum Machine Learning with Variational Quantum Classifiers",
+    "abstract": "We propose a variational quantum classifier operating on high dimensional deep representations via amplitude encoding, stabilized by a learnable classical pre encoding layer.By combining normalized amplitude embeddings with bounded quantum observables, the resulting model induces a structured and smooth hypothesis class with controlled sensitivity to input variations. Model reliability is assessed using SAFE-AI metrics derived from the Cramer von Mises divergence, enabling consistent evaluation across accuracy, robustness, and explainability dimensions. Empirical results show that the proposed quantum model provides competitive predictive performance compared with strong classical baselines while exhibiting a more balanced SAFE reliability profile, with improved robustness to noise and stability under structured feature removal. These findings suggest that variational quantum circuits offer a principled mechanism for stability oriented SAFE learning in safety critical settings.",
+    "authors": [
+      "Ying Chen",
+      "Paolo Giudici",
+      "Vasily Kolesnikov",
+      "Paolo Recchia"
+    ],
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "published_at": "2026-05-15T15:29:36Z",
+    "updated_at": "2026-05-15T15:29:36Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.16067v1"
+  },
+  {
+    "arxiv_id": "2405.20237",
+    "title": "Training-efficient density quantum machine learning",
+    "abstract": "Quantum machine learning (QML) requires powerful, flexible and efficiently trainable models to be successful in solving challenging problems. We introduce density quantum neural networks, a model family that prepares mixtures of trainable unitaries, with a distributional constraint over coefficients. This framework balances expressivity and efficient trainability, especially on quantum hardware. For expressivity, the Hastings-Campbell Mixing lemma converts benefits from linear combination of unitaries into density models with similar performance guarantees but shallower circuits. For trainability, commuting-generator circuits enable density model construction with efficiently extractable gradients. The framework connects to various facets of QML including post-variational and measurement-based learning. In classical settings, density models naturally integrate the mixture of experts formalism, and offer natural overfitting mitigation. The framework is versatile - we uplift several quantum models into density versions to improve model performance, or trainability, or both. These include Hamming weight-preserving and equivariant models, among others. Extensive numerical experiments validate our findings.",
+    "authors": [
+      "Brian Coyle",
+      "Snehal Raj",
+      "Natansh Mathur",
+      "El Amine Cherrat",
+      "Nishant Jain",
+      "Skander Kazdaghli",
+      "Iordanis Kerenidis"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2024-05-30T16:40:28Z",
+    "updated_at": "2025-05-23T10:51:37Z",
+    "version": 2,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2405.20237v2"
+  },
+  {
+    "arxiv_id": "1804.02398",
+    "title": "Quantum Machine Learning Tensor Network States",
+    "abstract": "Tensor network algorithms seek to minimize correlations to compress the classical data representing quantum states. Tensor network algorithms and similar tools---called tensor network methods---form the backbone of modern numerical methods used to simulate many-body physics and have a further range of applications in machine learning. Finding and contracting tensor network states is a computational task which quantum computers might be used to accelerate. We present a quantum algorithm which returns a classical description of a rank-$r$ tensor network state satisfying an area law and approximating an eigenvector given black-box access to a unitary matrix. Our work creates a bridge between several contemporary approaches, including tensor networks, the variational quantum eigensolver (VQE), quantum approximate optimization (QAOA), and quantum computation.",
+    "authors": [
+      "Andrey Kardashin",
+      "Alexey Uvarov",
+      "Jacob Biamonte"
+    ],
+    "categories": [
+      "quant-ph",
+      "cond-mat.dis-nn",
+      "cond-mat.str-el",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2018-04-06T18:00:00Z",
+    "updated_at": "2020-09-12T11:29:04Z",
+    "version": 4,
+    "doi": "10.3389/fphy.2020.586374",
+    "pdf_url": "https://arxiv.org/pdf/1804.02398v4"
+  },
+  {
+    "arxiv_id": "2208.08273",
+    "title": "Quantum Machine Learning for Material Synthesis and Hardware Security",
+    "abstract": "Using quantum computing, this paper addresses two scientifically pressing and day-to-day relevant problems, namely, chemical retrosynthesis which is an important step in drug/material discovery and security of the semiconductor supply chain. We show that Quantum Long Short-Term Memory (QLSTM) is a viable tool for retrosynthesis. We achieve 65% training accuracy with QLSTM, whereas classical LSTM can achieve 100%. However, in testing, we achieve 80% accuracy with the QLSTM while classical LSTM peaks at only 70% accuracy! We also demonstrate an application of Quantum Neural Network (QNN) in the hardware security domain, specifically in Hardware Trojan (HT) detection using a set of power and area Trojan features. The QNN model achieves detection accuracy as high as 97.27%.",
+    "authors": [
+      "Collin Beaudoin",
+      "Satwik Kundu",
+      "Rasit Onur Topaloglu",
+      "Swaroop Ghosh"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2022-08-16T15:58:43Z",
+    "updated_at": "2022-08-16T15:58:43Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2208.08273v1"
+  },
+  {
+    "arxiv_id": "2105.00098",
+    "title": "Quantum Machine Learning with SQUID",
+    "abstract": "In this work we present the Scaled QUantum IDentifier (SQUID), an open-source framework for exploring hybrid Quantum-Classical algorithms for classification problems. The classical infrastructure is based on PyTorch and we provide a standardized design to implement a variety of quantum models with the capability of back-propagation for efficient training. We present the structure of our framework and provide examples of using SQUID in a standard binary classification problem from the popular MNIST dataset. In particular, we highlight the implications for scalability for gradient-based optimization of quantum models on the choice of output for variational quantum models.",
+    "authors": [
+      "Alessandro Roggero",
+      "Jakub Filipek",
+      "Shih-Chieh Hsu",
+      "Nathan Wiebe"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2021-04-30T21:34:11Z",
+    "updated_at": "2022-05-27T11:39:10Z",
+    "version": 3,
+    "doi": "10.22331/q-2022-05-30-727",
+    "pdf_url": "https://arxiv.org/pdf/2105.00098v3"
+  },
+  {
+    "arxiv_id": "1804.10068",
+    "title": "Quantum machine learning for data scientists",
+    "abstract": "This text aims to present and explain quantum machine learning algorithms to a data scientist in an accessible and consistent way. The algorithms and equations presented are not written in rigorous mathematical fashion, instead, the pressure is put on examples and step by step explanation of difficult topics. This contribution gives an overview of selected quantum machine learning algorithms, however there is also a method of scores extraction for quantum PCA algorithm proposed as well as a new cost function in feed-forward quantum neural networks is introduced. The text is divided into four parts: the first part explains the basic quantum theory, then quantum computation and quantum computer architecture are explained in section two. The third part presents quantum algorithms which will be used as subroutines in quantum machine learning algorithms. Finally, the fourth section describes quantum machine learning algorithms with the use of knowledge accumulated in previous parts.",
+    "authors": [
+      "Dawid Kopczyk"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2018-04-25T17:31:18Z",
+    "updated_at": "2018-04-25T17:31:18Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/1804.10068v1"
+  },
+  {
+    "arxiv_id": "2510.14099",
+    "title": "A review of quantum machine learning and quantum-inspired applied methods to computational fluid dynamics",
+    "abstract": "Computational Fluid Dynamics (CFD) is central to science and engineering, but faces severe scalability challenges, especially in high-dimensional, multiscale, and turbulent regimes. Traditional numerical methods often become prohibitively expensive under these conditions. Quantum computing and quantum-inspired methods have been investigated as promising alternatives. This review surveys advances at the intersection of quantum computing, quantum algorithms, machine learning, and tensor network techniques for CFD. We discuss the use of Variational Quantum Algorithms as hybrid quantum-classical solvers for PDEs, emphasizing their ability to incorporate nonlinearities through Quantum Nonlinear Processing Units. We further review Quantum Neural Networks and Quantum Physics-Informed Neural Networks, which extend classical machine learning frameworks to quantum hardware and have shown advantages in parameter efficiency and solution accuracy for certain CFD benchmarks. Beyond quantum computing, we examine tensor network methods, originally developed for quantum many-body systems and now adapted to CFD as efficient high-dimensional compression and solver tools. Reported studies include several orders of magnitude reductions in memory and runtime while preserving accuracy. Together, these approaches highlight quantum and quantum-inspired strategies that may enable more efficient CFD solvers. This review closes with perspectives: quantum CFD remains out of reach in the NISQ era, but quantum-inspired tensor networks already show practical benefits, with hybrid approaches offering the most promising near-term strategy.",
+    "authors": [
+      "Cesar A. Amaral",
+      "Vinícius L. Oliveira",
+      "Juan P. L. C. Salazar",
+      "Eduardo I. Duzzioni"
+    ],
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-10-15T21:15:23Z",
+    "updated_at": "2026-04-09T20:41:37Z",
+    "version": 2,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.14099v2"
+  },
+  {
+    "arxiv_id": "2509.01422",
+    "title": "Exploring Quantum Machine Learning for Weather Forecasting",
+    "abstract": "Weather forecasting plays a crucial role in supporting strategic decisions across various sectors, including agriculture, renewable energy production, and disaster management. However, the inherently dynamic and chaotic behavior of the atmosphere presents significant challenges to conventional predictive models. On the other hand, introducing quantum computing simulation techniques to the forecasting problems constitutes a promising alternative to overcome these challenges. In this context, this work explores the emerging intersection between quantum machine learning (QML) and climate forecasting. We present the implementation of a Quantum Neural Network (QNN) trained on real meteorological data from NASA's Prediction of Worldwide Energy Resources (POWER) database. The results show that QNN has the potential to outperform a classical Recurrent Neural Network (RNN) in terms of accuracy and adaptability to abrupt data shifts, particularly in wind speed prediction. Despite observed nonlinearities and architectural sensitivities, the QNN demonstrated robustness in handling temporal variability and faster convergence in temperature prediction. These findings highlight the potential of quantum models in short and medium term climate prediction, while also revealing key challenges and future directions for optimization and broader applicability.",
+    "authors": [
+      "Maria Heloísa F. da Silva",
+      "Gleydson F. de Jesus",
+      "Christiano M. S. Nascimento",
+      "Valéria L. da Silva",
+      "Clebson Cruz"
+    ],
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "primary_category": "quant-ph",
+    "published_at": "2025-09-01T12:28:14Z",
+    "updated_at": "2025-09-01T12:28:14Z",
+    "version": 1,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.01422v1"
+  }
+]
