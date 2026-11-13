@@ -166,6 +166,45 @@ export function listPapers({
   });
 }
 
+const OPTIONS_TTL_MS = 60 * 60 * 1000;
+const optionsCache = new Map<string, { at: number; value: unknown }>();
+
+/** Small per-instance cache for filter options, which change only on ingest. */
+async function cachedOptions<T>(key: string, load: () => Promise<T>): Promise<T> {
+  const hit = optionsCache.get(key);
+  if (hit && Date.now() - hit.at < OPTIONS_TTL_MS) return hit.value as T;
+  const value = await load();
+  optionsCache.set(key, { at: Date.now(), value });
+  return value;
+}
+
+/** Topics that have at least one paper, for the search filters. */
+export function listTopics(): Promise<TopicRef[]> {
+  return cachedOptions("topics", () =>
+    withDb(async (db) => {
+      const rows = await db
+        .selectDistinct({ slug: topics.slug, label: topics.label })
+        .from(topics)
+        .innerJoin(paperTopics, eq(paperTopics.topicId, topics.id))
+        .orderBy(topics.label);
+      return rows;
+    }),
+  );
+}
+
+/** Distinct primary categories, for the search filters. */
+export function listCategories(): Promise<string[]> {
+  return cachedOptions("categories", () =>
+    withDb(async (db) => {
+      const rows = await db
+        .selectDistinct({ category: papers.primaryCategory })
+        .from(papers)
+        .orderBy(papers.primaryCategory);
+      return rows.map((r) => r.category);
+    }),
+  );
+}
+
 export function listPaperIds(limit?: number): Promise<string[]> {
   if (limit !== undefined) assertInt("limit", limit, 1, 100_000);
   return withDb(async (db) => {

@@ -5,8 +5,10 @@ export {
   getPaper,
   getRelated,
   getTopic,
+  listCategories,
   listPaperIds,
   listPapers,
+  listTopics,
   searchPapers,
 } from "./queries";
 export {
