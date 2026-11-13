@@ -8,6 +8,8 @@ class ResizeObserverStub {
   disconnect() {}
 }
 globalThis.ResizeObserver ??= ResizeObserverStub;
-Element.prototype.scrollIntoView ??= () => {};
+if (typeof Element !== "undefined") {
+  Element.prototype.scrollIntoView ??= () => {};
+}
 
 afterEach(() => cleanup());
