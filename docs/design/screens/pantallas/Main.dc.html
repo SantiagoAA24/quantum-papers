@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers: detalle de paper</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:1850px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 clamp(20px,4vw,40px);">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader"></x-import>
+
+<div style="padding-top:24px;"><x-import component-from-global-scope="QuantumPapers.Breadcrumb" items="{{migas}}"></x-import></div>
+
+<header style="padding:24px 0 var(--space-12);">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:20px;">paper · [categoría]</x-import>
+<h1 style="margin:0;max-width:1000px;font-family:var(--font-sans);font-weight:700;font-size:clamp(32px,4.2vw,56px);line-height:1.08;letter-spacing:-0.02em;text-wrap:balance;">Variational quantum circuits for image classification</h1>
+<p style="margin:24px 0 0;font-family:var(--font-mono);font-size:14px;line-height:1.4;color:var(--text-muted);">[Autores] · [Año] · arXiv:[id]</p>
+<div style="margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;">
+<x-import component-from-global-scope="QuantumPapers.Button">leer en arXiv →</x-import>
+<x-import component-from-global-scope="QuantumPapers.TextLink">ver_pdf →</x-import>
+<x-import component-from-global-scope="QuantumPapers.TextLink">copiar_cita →</x-import>
+</div>
+</header>
+
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-12);">
+
+<main style="flex:1 1 640px;min-width:0;display:flex;flex-direction:column;gap:var(--space-12);">
+
+<section>
+<h2 style="margin:0 0 20px;font-family:var(--font-sans);font-size:28px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">Resumen</h2>
+<p style="margin:0;max-width:68ch;font-family:var(--font-sans);font-size:18px;line-height:1.6;color:var(--text);">[Abstract del paper en su idioma original, tal como aparece en arXiv.]</p>
+</section>
+
+<section>
+<h2 style="margin:0 0 20px;font-family:var(--font-sans);font-size:28px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">Resumen con IA</h2>
+<x-import component-from-global-scope="QuantumPapers.Panel" label="resumen generado con IA · [modelo] · [fecha]">
+<div style="display:flex;flex-direction:column;gap:20px;padding:8px 20px 24px;">
+<div>
+<p style="margin:0 0 8px;font-family:var(--font-mono);font-size:12px;line-height:1.2;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);">Problema</p>
+<p style="margin:0;font-family:var(--font-sans);font-size:18px;line-height:1.6;">[Una o dos frases.]</p>
+</div>
+<div>
+<p style="margin:0 0 8px;font-family:var(--font-mono);font-size:12px;line-height:1.2;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);">Método</p>
+<p style="margin:0;font-family:var(--font-sans);font-size:18px;line-height:1.6;">[Una o dos frases.]</p>
+</div>
+<div>
+<p style="margin:0 0 8px;font-family:var(--font-mono);font-size:12px;line-height:1.2;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);">Resultado</p>
+<p style="margin:0;font-family:var(--font-sans);font-size:18px;line-height:1.6;">[Una o dos frases.]</p>
+</div>
+</div>
+</x-import>
+</section>
+
+<section>
+<h2 style="margin:0 0 20px;font-family:var(--font-sans);font-size:28px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">Papers relacionados</h2>
+<x-import component-from-global-scope="QuantumPapers.Panel" label="cercanos en significado · ordenados por similitud">
+<ol class="qp-results">
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="01" title="Hybrid quantum-classical neural networks for small datasets" topic="qnn" similarity="0.88"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="02" title="Data encoding strategies for quantum classifiers" topic="vqc" similarity="0.79"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="03" title="Trainability and barren plateaus in parameterized circuits" topic="barren-plateaus" similarity="0.71"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="04" title="Quantum kernel methods under limited training data" topic="qsvm" similarity="0.66"></x-import>
+</ol>
+</x-import>
+</section>
+
+</main>
+
+<aside style="flex:0 1 340px;min-width:280px;display:flex;flex-direction:column;gap:var(--space-6);">
+
+<x-import component-from-global-scope="QuantumPapers.Panel" label="// ficha">
+<x-import component-from-global-scope="QuantumPapers.DataList" items="{{ficha}}"></x-import>
+</x-import>
+
+<x-import component-from-global-scope="QuantumPapers.Panel" label="// temas">
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);padding:8px 20px 20px;">
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="vqc"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="circuitos-variacionales"></x-import>
+</div>
+</x-import>
+
+<x-import component-from-global-scope="QuantumPapers.Panel" label="// cómo se generó esta página">
+<x-import component-from-global-scope="QuantumPapers.DataList" items="{{render}}"></x-import>
+</x-import>
+
+</aside>
+
+</div>
+
+<x-import component-from-global-scope="QuantumPapers.SiteFooter"></x-import>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1850}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+  migas: [
+    { label: "papers", href: "#" },
+    { label: "vqc", href: "#" },
+    { label: "[arXiv:id]" }
+  ],
+  ficha: [
+    { label: "arXiv", value: "[arXiv:id]" },
+    { label: "categoría", value: "[categoría]" },
+    { label: "enviado", value: "[fecha]" },
+    { label: "versión", value: "[vN]" },
+    { label: "doi", value: "[doi]" }
+  ],
+  render: [
+    { label: "estrategia", value: "ISR", accent: true },
+    { label: "revalidate", value: "[segundos]" },
+    { label: "generada", value: "[timestamp]" },
+    { label: "TTFB", value: "[ms]" }
+  ]
+};
+}
+}
+</script>
+</body>
+</html>

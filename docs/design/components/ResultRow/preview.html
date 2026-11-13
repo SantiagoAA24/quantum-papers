@@ -1,0 +1,14 @@
+<!-- @dsCard group="Search" height=240 subtitle="Resultado con similitud" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>body{margin:0;padding:24px;background:var(--bg-base);color:var(--text)}ol{list-style:none;margin:0;padding:0;max-width:960px;background:var(--bg-panel);border:1px solid var(--border);border-radius:var(--radius-lg)}</style>
+</head><body><div id="root"></div>
+<script>
+var Q = window.QuantumPapers, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  h('ol', null,
+    h(Q.ResultRow, { rank: '01', title: 'Variational quantum circuits for image classification', topic: 'vqc', similarity: 0.92 }),
+    h(Q.ResultRow, { rank: '02', title: 'Hybrid quantum-classical neural networks for small datasets', topic: 'qnn', similarity: 0.81 }),
+    h(Q.ResultRow, { rank: '03', title: 'Quantum kernel methods under limited training data', topic: 'qsvm', similarity: 0.74 })));
+</script></body></html>

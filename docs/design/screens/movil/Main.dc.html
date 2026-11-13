@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers móvil: home</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:2px solid var(--text);outline-offset:2px}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:1900px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 20px;">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader"></x-import>
+
+<section style="padding:48px 0 40px;">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:16px;">búsqueda semántica sobre papers de arXiv</x-import>
+<h1 style="margin:0;font-family:var(--font-sans);font-weight:700;font-size:36px;line-height:1.05;letter-spacing:-0.02em;text-wrap:balance;">Pregunta con tus palabras. <span style="color:var(--accent);">Obtén los papers más cercanos.</span></h1>
+<div style="margin-top:32px;">
+<x-import component-from-global-scope="QuantumPapers.SearchPanel" default-value="circuitos variacionales para clasificación" results-label="resultados de ejemplo · ordenados por similitud">
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="01" title="Variational quantum circuits for image classification" topic="vqc" similarity="0.92"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="02" title="Hybrid quantum-classical neural networks for small datasets" topic="qnn" similarity="0.81"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="03" title="Quantum kernel methods under limited training data" topic="qsvm" similarity="0.74"></x-import>
+</x-import>
+</div>
+</section>
+
+<section>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-bottom:8px;">
+<h2 style="margin:0;font-family:var(--font-sans);font-size:24px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">Papers destacados</h2>
+<x-import component-from-global-scope="QuantumPapers.TextLink">ver_todos →</x-import>
+</div>
+<div style="border-top:1px solid var(--border);">
+<x-import component-from-global-scope="QuantumPapers.PaperRow" index="01" title="Variational quantum circuits for image classification" topic="vqc"></x-import>
+<x-import component-from-global-scope="QuantumPapers.PaperRow" index="02" title="Hybrid quantum-classical neural networks for small datasets" topic="qnn"></x-import>
+<x-import component-from-global-scope="QuantumPapers.PaperRow" index="03" title="Quantum kernel methods under limited training data" topic="qsvm"></x-import>
+<x-import component-from-global-scope="QuantumPapers.PaperRow" index="04" title="Trainability and barren plateaus in parameterized circuits" topic="barren-plateaus"></x-import>
+</div>
+</section>
+
+<section style="margin-top:56px;">
+<h2 style="margin:0 0 16px;font-family:var(--font-sans);font-size:24px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">Temas</h2>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="circuitos-variacionales"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="kernels-cuánticos"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="qnn"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="barren-plateaus"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="corrección-de-errores"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="qaoa"></x-import>
+</div>
+</section>
+
+<div style="margin-top:64px;"><x-import component-from-global-scope="QuantumPapers.SiteFooter" left="datos: arXiv" right="portafolio"></x-import></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

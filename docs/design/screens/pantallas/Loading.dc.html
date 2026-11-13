@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers: resultados cargando</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:1450px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 clamp(20px,4vw,40px);">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader"></x-import>
+
+<header style="padding:48px 0 var(--space-8);">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:20px;">búsqueda semántica</x-import>
+<x-import component-from-global-scope="QuantumPapers.SearchPanel" default-value="circuitos variacionales para clasificación"></x-import>
+<p role="status" style="margin:20px 0 0;font-family:var(--font-mono);font-size:13px;line-height:1.4;color:var(--text-muted);">buscando…</p>
+</header>
+
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-12);">
+
+<aside style="flex:0 0 260px;min-width:240px;">
+<form style="display:flex;flex-direction:column;gap:var(--space-8);">
+
+<x-import component-from-global-scope="QuantumPapers.FilterGroup" legend="tema">
+<x-import component-from-global-scope="QuantumPapers.Checkbox" name="tema" value="vqc" default-checked="{{yes}}">#vqc</x-import>
+<x-import component-from-global-scope="QuantumPapers.Checkbox" name="tema" value="qsvm">#qsvm</x-import>
+<x-import component-from-global-scope="QuantumPapers.Checkbox" name="tema" value="qnn">#qnn</x-import>
+<x-import component-from-global-scope="QuantumPapers.Checkbox" name="tema" value="barren-plateaus">#barren-plateaus</x-import>
+<x-import component-from-global-scope="QuantumPapers.Checkbox" name="tema" value="qaoa">#qaoa</x-import>
+</x-import>
+
+<x-import component-from-global-scope="QuantumPapers.FilterGroup" legend="año">
+<div class="qp-filter__row">
+<div style="flex:1 1 0;min-width:0;"><x-import component-from-global-scope="QuantumPapers.TextField" label="desde" name="desde" placeholder="[año]"></x-import></div>
+<div style="flex:1 1 0;min-width:0;"><x-import component-from-global-scope="QuantumPapers.TextField" label="hasta" name="hasta" placeholder="[año]"></x-import></div>
+</div>
+</x-import>
+
+<x-import component-from-global-scope="QuantumPapers.FilterGroup" legend="ordenar por">
+<x-import component-from-global-scope="QuantumPapers.Radio" name="orden" value="similitud" default-checked="{{yes}}">similitud</x-import>
+<x-import component-from-global-scope="QuantumPapers.Radio" name="orden" value="año">año</x-import>
+</x-import>
+
+<div>
+<x-import component-from-global-scope="QuantumPapers.TextLink">limpiar_filtros →</x-import>
+<p style="margin:8px 0 0;font-family:var(--font-mono);font-size:12px;line-height:1.4;letter-spacing:0.06em;color:var(--text-muted);">// los filtros viven en la URL</p>
+</div>
+
+</form>
+</aside>
+
+<main style="flex:1 1 560px;min-width:0;">
+<x-import component-from-global-scope="QuantumPapers.Panel" label="buscando… · 3 de [N] resultados recibidos">
+<ol class="qp-results" aria-busy="true">
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="01" title="Variational quantum circuits for image classification" topic="vqc" similarity="0.92"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="02" title="Hybrid quantum-classical neural networks for small datasets" topic="qnn" similarity="0.81"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRow" rank="03" title="Quantum kernel methods under limited training data" topic="qsvm" similarity="0.74"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRowSkeleton" title-width="62%"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRowSkeleton" title-width="48%"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRowSkeleton" title-width="68%"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRowSkeleton" title-width="54%"></x-import>
+<x-import component-from-global-scope="QuantumPapers.ResultRowSkeleton" title-width="58%"></x-import>
+</ol>
+</x-import>
+</main>
+
+</div>
+
+<x-import component-from-global-scope="QuantumPapers.SiteFooter"></x-import>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1450}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

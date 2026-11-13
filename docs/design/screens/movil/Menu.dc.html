@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers móvil: menú abierto</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:2px solid var(--text);outline-offset:2px}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:720px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 20px;">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader" open="{{yes}}"></x-import>
+
+<section style="padding:32px 0 0;">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:16px;">búsqueda semántica sobre papers de arXiv</x-import>
+<h1 style="margin:0;font-family:var(--font-sans);font-weight:700;font-size:36px;line-height:1.05;letter-spacing:-0.02em;text-wrap:balance;">Pregunta con tus palabras. <span style="color:var(--accent);">Obtén los papers más cercanos.</span></h1>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":720}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

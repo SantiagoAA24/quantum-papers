@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers: 404</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:900px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 clamp(20px,4vw,40px);">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader"></x-import>
+
+<header style="padding:96px 0 var(--space-12);">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:20px;">404 · papers/[id]</x-import>
+<h1 style="margin:0;max-width:900px;font-family:var(--font-sans);font-weight:700;font-size:clamp(32px,4.2vw,56px);line-height:1.08;letter-spacing:-0.02em;text-wrap:balance;">Este paper no está en el índice</h1>
+<p class="body" style="margin:24px 0 0;max-width:68ch;color:var(--text);">No hay ningún registro para [arXiv:id]. Puede que el identificador esté mal escrito o que el paper aún no se haya ingerido.</p>
+<div style="margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;">
+<x-import component-from-global-scope="QuantumPapers.Button">buscar en el índice</x-import>
+<x-import component-from-global-scope="QuantumPapers.TextLink">ver_todos_los_papers →</x-import>
+</div>
+</header>
+
+<main style="max-width:480px;">
+<x-import component-from-global-scope="QuantumPapers.Panel" label="// petición"><x-import component-from-global-scope="QuantumPapers.DataList" items="{{peticion}}"></x-import></x-import>
+</main>
+
+<div style="margin-top:var(--space-24);"><x-import component-from-global-scope="QuantumPapers.SiteFooter"></x-import></div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+  peticion: [
+    { label: "ruta", value: "/papers/[id]" },
+    { label: "estado", value: "404", accent: true },
+    { label: "respuesta", value: "notFound()" },
+    { label: "indexable", value: "noindex" }
+  ]
+};
+}
+}
+</script>
+</body>
+</html>

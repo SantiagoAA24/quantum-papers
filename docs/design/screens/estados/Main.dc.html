@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers: sin resultados</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:900px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 clamp(20px,4vw,40px);">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader"></x-import>
+
+<header style="padding:48px 0 var(--space-8);">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:20px;">búsqueda semántica</x-import>
+<x-import component-from-global-scope="QuantumPapers.SearchPanel" default-value="transformers cuánticos para series de tiempo financieras"></x-import>
+<p role="status" style="margin:20px 0 0;font-family:var(--font-mono);font-size:13px;line-height:1.4;color:var(--text-muted);">0 resultados · año desde 2026</p>
+</header>
+
+<main style="max-width:960px;">
+<x-import component-from-global-scope="QuantumPapers.Panel" label="sin_resultados">
+<div style="padding:8px 20px 32px;">
+<h2 style="margin:0;font-family:var(--font-sans);font-size:28px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">Ningún paper se acerca lo suficiente a esa consulta</h2>
+<p class="body" style="margin:16px 0 0;max-width:60ch;">El filtro de año deja fuera casi todo el índice. Prueba quitarlo o describir la idea con otras palabras.</p>
+<div style="margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;">
+<x-import component-from-global-scope="QuantumPapers.Button">limpiar filtros</x-import>
+<x-import component-from-global-scope="QuantumPapers.TextLink">ver_todos_los_papers →</x-import>
+</div>
+</div>
+</x-import>
+
+<section style="margin-top:var(--space-8);">
+<p style="margin:0 0 12px;font-family:var(--font-mono);font-size:12px;line-height:1.2;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);">temas cercanos</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);">
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="vqc"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="qnn"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="kernels-cuánticos"></x-import>
+<x-import component-from-global-scope="QuantumPapers.TopicTag" label="qaoa"></x-import>
+</div>
+</section>
+</main>
+
+<div style="margin-top:var(--space-24);"><x-import component-from-global-scope="QuantumPapers.SiteFooter"></x-import></div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QuantumPapers: error de búsqueda</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/quantumpapers/tokens.css">
+<link rel="stylesheet" href="ds/quantumpapers/components/bundle.css">
+<script src="ds/quantumpapers/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+</style>
+</helmet>
+<div style="background-color:var(--bg-base);background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:var(--font-sans);min-height:900px;">
+<div style="max-width:var(--container-max);margin:0 auto;padding:0 clamp(20px,4vw,40px);">
+
+<x-import component-from-global-scope="QuantumPapers.SiteHeader"></x-import>
+
+<header style="padding:48px 0 var(--space-8);">
+<x-import component-from-global-scope="QuantumPapers.Kicker" style="display:block;margin-bottom:20px;">búsqueda semántica</x-import>
+<x-import component-from-global-scope="QuantumPapers.SearchPanel" default-value="circuitos variacionales para clasificación"></x-import>
+</header>
+
+<main style="max-width:960px;">
+<x-import component-from-global-scope="QuantumPapers.Panel" label="error · búsqueda">
+<div role="alert" style="padding:8px 20px 32px;">
+<h2 style="margin:0;font-family:var(--font-sans);font-size:28px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;">No pudimos completar la búsqueda</h2>
+<p class="body" style="margin:16px 0 0;max-width:60ch;">El servicio que convierte tu consulta en un vector no respondió a tiempo. Tu consulta y tus filtros siguen en la URL, así que puedes reintentar sin perder nada.</p>
+<div style="margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;">
+<x-import component-from-global-scope="QuantumPapers.Button">reintentar</x-import>
+<x-import component-from-global-scope="QuantumPapers.TextLink">volver_al_inicio →</x-import>
+</div>
+</div>
+</x-import>
+
+<div style="margin-top:var(--space-6);">
+<x-import component-from-global-scope="QuantumPapers.Panel" label="// detalles técnicos"><x-import component-from-global-scope="QuantumPapers.DataList" items="{{detalles}}"></x-import></x-import>
+</div>
+</main>
+
+<div style="margin-top:var(--space-24);"><x-import component-from-global-scope="QuantumPapers.SiteFooter"></x-import></div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+  detalles: [
+    { label: "código", value: "503" },
+    { label: "ruta", value: "/search" },
+    { label: "origen", value: "[servicio de embeddings]" },
+    { label: "solicitud", value: "[request-id]" },
+    { label: "hora", value: "[timestamp]" }
+  ]
+};
+}
+}
+</script>
+</body>
+</html>
