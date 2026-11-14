@@ -32,6 +32,7 @@ export default async function SearchPage({ searchParams }: Props) {
   return (
     <>
       <header className="qp-search-head">
+        <h1 className="qp-sr-only">Búsqueda semántica de papers</h1>
         <Kicker>búsqueda semántica</Kicker>
         <SearchPanel action="/search" method="get" name="q" defaultValue={params.q} />
         {canSearch ? (

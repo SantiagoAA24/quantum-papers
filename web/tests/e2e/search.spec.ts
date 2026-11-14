@@ -27,7 +27,7 @@ test("el formulario de búsqueda envía q por GET", async ({ page }) => {
   await page.goto("/search");
   await page.getByLabel("Consulta").fill("variational quantum classifier");
   await page.getByRole("button", { name: "buscar ↵" }).click();
-  await expect(page).toHaveURL(/\/search\?q=variational\+quantum\+classifier$/);
+  await expect(page).toHaveURL(/\/search\?q=variational\+quantum\+classifier(&render=full)?$/);
 });
 
 test("los filtros se aplican por GET y quedan en la URL", async ({ page }) => {
@@ -68,6 +68,6 @@ test.describe("con embeddings", () => {
     await page.goto("/search?q=variational+quantum+classifier&year_from=2026&category=nope-ph");
     await expect(page.getByText("sin_resultados")).toBeVisible();
     await page.getByRole("button", { name: "limpiar filtros" }).click();
-    await expect(page).toHaveURL(/\/search\?q=variational\+quantum\+classifier$/);
+    await expect(page).toHaveURL(/\/search\?q=variational\+quantum\+classifier(&render=full)?$/);
   });
 });

@@ -12,7 +12,8 @@
     "test:e2e": "playwright test",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "node --env-file=.env.local --experimental-strip-types src/db/migrate.ts",
-    "db:seed": "node --env-file=.env.local --experimental-strip-types src/db/seed/index.ts"
+    "db:seed": "node --env-file=.env.local --experimental-strip-types src/db/seed/index.ts",
+    "lhci": "node scripts/lhci.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
+    "@lhci/cli": "^0.16.1",
     "@playwright/test": "^1.65.0",
     "@tailwindcss/turbopack": "4.3.3",
     "@testing-library/dom": "^10.4.2",
