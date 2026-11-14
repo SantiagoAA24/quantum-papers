@@ -5,10 +5,12 @@ export {
   getPaper,
   getRelated,
   getTopic,
+  listAuthorSlugs,
   listCategories,
   listPaperIds,
   listPapers,
   listTopics,
+  listTopicSlugs,
   searchPapers,
 } from "./queries";
 export {

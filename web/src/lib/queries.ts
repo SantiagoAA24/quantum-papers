@@ -205,6 +205,26 @@ export function listCategories(): Promise<string[]> {
   );
 }
 
+/** Slugs of authors with at least one paper, most prolific first, for generateStaticParams. */
+export function listAuthorSlugs(limit = 200): Promise<string[]> {
+  assertInt("limit", limit, 1, 100_000);
+  return withDb(async (db) => {
+    const rows = await db
+      .select({ slug: authors.slug })
+      .from(authors)
+      .innerJoin(paperAuthors, eq(paperAuthors.authorId, authors.id))
+      .groupBy(authors.id, authors.slug)
+      .orderBy(desc(count()), authors.slug)
+      .limit(limit);
+    return rows.map((r) => r.slug);
+  });
+}
+
+/** Slugs of topics with at least one paper, for generateStaticParams. */
+export async function listTopicSlugs(): Promise<string[]> {
+  return (await listTopics()).map((t) => t.slug);
+}
+
 export function listPaperIds(limit?: number): Promise<string[]> {
   if (limit !== undefined) assertInt("limit", limit, 1, 100_000);
   return withDb(async (db) => {
@@ -364,6 +384,14 @@ export function getRelated(arxivId: string, limit = 5): Promise<SearchResult[]> 
   });
 }
 
+async function countFor(db: Db, link: "author" | "topic", entityId: number): Promise<number> {
+  const [row] =
+    link === "author"
+      ? await db.select({ n: count() }).from(paperAuthors).where(eq(paperAuthors.authorId, entityId))
+      : await db.select({ n: count() }).from(paperTopics).where(eq(paperTopics.topicId, entityId));
+  return Number(row?.n ?? 0);
+}
+
 async function papersFor(
   db: Db,
   link: "author" | "topic",
@@ -398,6 +426,7 @@ export function getAuthor(slug: string): Promise<AuthorWithPapers | null> {
     if (!row) return null;
     return {
       author: { slug: row.slug, name: row.name },
+      total: await countFor(db, "author", row.id),
       papers: await papersFor(db, "author", row.id),
     };
   });
@@ -413,6 +442,7 @@ export function getTopic(slug: string): Promise<TopicWithPapers | null> {
     if (!row) return null;
     return {
       topic: { slug: row.slug, label: row.label },
+      total: await countFor(db, "topic", row.id),
       papers: await papersFor(db, "topic", row.id),
     };
   });

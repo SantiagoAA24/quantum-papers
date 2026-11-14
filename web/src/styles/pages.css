@@ -75,3 +75,23 @@
 /* Command palette in a modal <dialog>; ::backdrop dims the page. */
 .qp-palette { width: 640px; max-width: calc(100% - 40px); margin: 120px auto 0; padding: 0; border: 0; background: transparent; color: inherit; overflow: visible; }
 .qp-palette::backdrop { background: rgba(11, 15, 20, 0.82); }
+
+/* /about, /how-it-works */
+.qp-info-head { padding: 72px 0 var(--space-12); }
+.qp-info-head > .qp-kicker { display: block; margin-bottom: 20px; }
+.qp-info-section { padding-bottom: var(--space-12); }
+.qp-info-section .qp-h2 { margin-bottom: 20px; }
+.qp-grid { display: grid; gap: var(--space-6); align-items: start; }
+.qp-grid--300 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.qp-grid--240 { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.qp-grid--340 { grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); }
+.qp-card-text { margin: 0; padding: 8px 20px 20px; font: 400 16px/1.6 var(--font-sans); color: var(--text); }
+.qp-card-text--step { padding-bottom: 24px; }
+.qp-about { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-12); }
+.qp-about__main { flex: 1 1 640px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-12); }
+.qp-about__aside { flex: 0 1 340px; min-width: min(280px, 100%); display: flex; flex-direction: column; gap: var(--space-6); }
+.qp-about__main .qp-body + .qp-body { margin-top: 16px; }
+.qp-about__main .qp-body, .qp-info-head .qp-body { max-width: 68ch; }
+.qp-info-head .qp-body { margin-top: 24px; }
+.qp-footnote { margin: 20px 0 0; font: 400 13px/1.4 var(--font-mono); color: var(--text-muted); }
+.qp-info-footer { margin-top: var(--space-24); }

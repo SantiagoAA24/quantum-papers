@@ -57,5 +57,6 @@ export type PaperPage = {
   pageCount: number;
 };
 
-export type AuthorWithPapers = { author: AuthorRef; papers: PaperSummary[] };
-export type TopicWithPapers = { topic: TopicRef; papers: PaperSummary[] };
+/** `total` counts every paper of the entity; `papers` holds at most the 50 newest. */
+export type AuthorWithPapers = { author: AuthorRef; total: number; papers: PaperSummary[] };
+export type TopicWithPapers = { topic: TopicRef; total: number; papers: PaperSummary[] };

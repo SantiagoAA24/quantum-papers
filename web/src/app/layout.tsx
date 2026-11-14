@@ -24,9 +24,8 @@ export const metadata: Metadata = {
 
 const NAV = [
   { label: "papers", href: "/papers/page/1" },
-  { label: "temas", href: "#" },
-  { label: "autores", href: "#" },
-  { label: "cómo_funciona", href: "#" },
+  { label: "temas", href: "/#temas" },
+  { label: "cómo_funciona", href: "/how-it-works" },
 ];
 
 export default function RootLayout({ children }: { children: ReactNode }) {

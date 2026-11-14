@@ -302,11 +302,13 @@ describe.skipIf(!url)("src/lib (integration)", () => {
   it("getAuthor and getTopic return the entity with its papers, newest first", async () => {
     const author = await lib.getAuthor("ada-test");
     expect(author?.author.name).toBe("Ada Test");
+    expect(author?.total).toBe(3);
     expect(author?.papers.map((p) => p.arxivId)).toEqual(["core.0003", "core.0002", "core.0001"]);
     expect(await lib.getAuthor("nobody")).toBeNull();
 
     const topic = await lib.getTopic("qml-test");
     expect(topic?.papers).toHaveLength(12);
+    expect(topic?.total).toBe(12);
     expect(await lib.getTopic("nothing")).toBeNull();
   });
 
@@ -320,6 +322,8 @@ describe.skipIf(!url)("src/lib (integration)", () => {
       );
       const result = await lib.getAuthor("prolific");
       expect(result?.papers).toHaveLength(50);
+      expect(result?.total).toBe(60);
+      expect(await lib.listAuthorSlugs(1)).toEqual(["prolific"]);
     } finally {
       await close();
     }
