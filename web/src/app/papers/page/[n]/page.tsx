@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Kicker, Pagination, PaperRow } from "@/components/qp";
 import { listPapers } from "@/lib";
 import { paperRowProps } from "@/lib/format";
+import { pageMetadata } from "@/lib/seo";
 import { buildPages, pageHref, parsePageNumber } from "@/lib/pagination";
 
 export const revalidate = 3600;
@@ -22,7 +23,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { n } = await params;
-  return { title: `Papers · página ${n}` };
+  return pageMetadata({
+    title: n === "1" ? "Todos los papers" : `Papers · página ${n}`,
+    description: "Catálogo de papers de machine learning cuántico indexados desde arXiv, con búsqueda semántica.",
+    path: `/papers/page/${n}`,
+  });
 }
 
 export default async function PapersPage({ params }: Props) {

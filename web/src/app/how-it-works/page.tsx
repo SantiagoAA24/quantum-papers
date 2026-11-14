@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DataList, Kicker, Panel } from "@/components/qp";
+import { pageMetadata } from "@/lib/seo";
 import { isSample, lighthouse } from "@/lib/metrics";
 
-export const metadata: Metadata = { title: "Cómo funciona" };
+export const metadata: Metadata = pageMetadata({
+  title: "Cómo funciona",
+  description: "Cómo se construye QuantumPapers: ingesta desde arXiv, embeddings, búsqueda vectorial y renderizado en el servidor con Next.js.",
+  path: "/how-it-works",
+});
 
 const SSG = [
   { label: "/", value: "SSG" },

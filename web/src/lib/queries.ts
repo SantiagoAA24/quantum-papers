@@ -1,6 +1,6 @@
 import "server-only";
 
-import { count, desc, eq, inArray, sql } from "drizzle-orm";
+import { count, desc, eq, inArray, max, sql } from "drizzle-orm";
 
 import {
   authors,
@@ -234,6 +234,50 @@ export function listPaperIds(limit?: number): Promise<string[]> {
       .orderBy(desc(papers.publishedAt), desc(papers.id));
     const rows = limit === undefined ? await query : await query.limit(limit);
     return rows.map((r) => r.arxivId);
+  });
+}
+
+export type SitemapEntry = { id: string; updatedAt: string };
+
+/** Every paper with its updated_at, newest first. No limit: the sitemap lists them all. */
+export function listPaperSitemapEntries(): Promise<SitemapEntry[]> {
+  return withDb(async (db) => {
+    const rows = await db
+      .select({ id: papers.arxivId, updatedAt: papers.updatedAt })
+      .from(papers)
+      .orderBy(desc(papers.updatedAt), desc(papers.id));
+    return rows.map((r) => ({ id: r.id, updatedAt: new Date(r.updatedAt).toISOString() }));
+  });
+}
+
+/** Authors and topics have no date of their own: use the newest updated_at of their papers. */
+export function listAuthorSitemapEntries(): Promise<SitemapEntry[]> {
+  return withDb(async (db) => {
+    const rows = await db
+      .select({ id: authors.slug, updatedAt: max(papers.updatedAt) })
+      .from(authors)
+      .innerJoin(paperAuthors, eq(paperAuthors.authorId, authors.id))
+      .innerJoin(papers, eq(papers.id, paperAuthors.paperId))
+      .groupBy(authors.id, authors.slug)
+      .orderBy(authors.slug);
+    return rows.flatMap((r) =>
+      r.updatedAt ? [{ id: r.id, updatedAt: new Date(r.updatedAt).toISOString() }] : [],
+    );
+  });
+}
+
+export function listTopicSitemapEntries(): Promise<SitemapEntry[]> {
+  return withDb(async (db) => {
+    const rows = await db
+      .select({ id: topics.slug, updatedAt: max(papers.updatedAt) })
+      .from(topics)
+      .innerJoin(paperTopics, eq(paperTopics.topicId, topics.id))
+      .innerJoin(papers, eq(papers.id, paperTopics.paperId))
+      .groupBy(topics.id, topics.slug)
+      .orderBy(topics.slug);
+    return rows.flatMap((r) =>
+      r.updatedAt ? [{ id: r.id, updatedAt: new Date(r.updatedAt).toISOString() }] : [],
+    );
   });
 }
 

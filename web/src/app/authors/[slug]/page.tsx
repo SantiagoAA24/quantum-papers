@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EntityPage } from "@/components/EntityPage";
 import { getAuthor, listAuthorSlugs } from "@/lib";
+import { pageMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -18,7 +19,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = await loadAuthor(decodeURIComponent(slug));
-  return { title: data ? data.author.name : "Autor no encontrado" };
+  if (!data) return { title: "Autor no encontrado", robots: { index: false } };
+  return pageMetadata({
+    title: data.author.name,
+    description: `${data.total} papers de ${data.author.name} sobre machine learning cuántico, con resúmenes y enlaces a arXiv.`,
+    path: `/authors/${data.author.slug}`,
+  });
 }
 
 export default async function AuthorPage({ params }: Props) {

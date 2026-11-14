@@ -5,11 +5,14 @@ export {
   getPaper,
   getRelated,
   getTopic,
+  listAuthorSitemapEntries,
   listAuthorSlugs,
   listCategories,
   listPaperIds,
+  listPaperSitemapEntries,
   listPapers,
   listTopics,
+  listTopicSitemapEntries,
   listTopicSlugs,
   searchPapers,
 } from "./queries";
@@ -20,3 +23,4 @@ export {
   InvalidQueryError,
 } from "./errors";
 export type * from "./types";
+export type { SitemapEntry } from "./queries";

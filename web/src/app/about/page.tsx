@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { DataList, Kicker, Panel, TextLink } from "@/components/qp";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = pageMetadata({
+  title: "About",
+  description: "Quién hizo QuantumPapers y por qué: un buscador semántico de papers de ML cuántico.",
+  path: "/about",
+});
 
 const FICHA = [
   { label: "ubicación", value: "Bogotá, Colombia" },

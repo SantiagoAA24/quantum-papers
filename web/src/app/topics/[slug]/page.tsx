@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EntityPage } from "@/components/EntityPage";
 import { getTopic, listTopicSlugs } from "@/lib";
+import { pageMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -18,7 +19,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = await loadTopic(decodeURIComponent(slug));
-  return { title: data ? data.topic.label : "Tema no encontrado" };
+  if (!data) return { title: "Tema no encontrado", robots: { index: false } };
+  return pageMetadata({
+    title: data.topic.label,
+    description: `${data.total} papers sobre ${data.topic.label} en machine learning cuántico, con resúmenes y enlaces a arXiv.`,
+    path: `/topics/${data.topic.slug}`,
+  });
 }
 
 export default async function TopicPage({ params }: Props) {

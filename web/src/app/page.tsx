@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import { Kicker, PaperRow, SearchPanel, TextLink, TopicTag } from "@/components/qp";
 import { paperRowProps } from "@/lib/format";
 import { listPapers } from "@/lib";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: "QuantumPapers",
+    description: "Buscador semántico de papers de machine learning cuántico: pregunta con tus palabras y obtén los papers de arXiv más cercanos.",
+    path: "/",
+  }),
+  title: { absolute: "QuantumPapers · búsqueda semántica de papers de ML cuántico" },
+};
 
 export default async function Home() {
   const { items } = await listPapers({ page: 1, pageSize: 8 });

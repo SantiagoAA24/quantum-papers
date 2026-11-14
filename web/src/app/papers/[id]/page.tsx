@@ -12,6 +12,8 @@ import {
 } from "@/components/qp";
 import { getPaper, getRelated, listPaperIds } from "@/lib";
 import { isoDate, paperRowProps, yearOf } from "@/lib/format";
+import { buildScholarlyArticle, serializeJsonLd } from "@/lib/jsonld";
+import { pageMetadata, truncateAtWord } from "@/lib/seo";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -28,7 +30,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const paper = await loadPaper(decodeURIComponent(id));
-  return { title: paper ? paper.title : "Paper no encontrado" };
+  if (!paper) return { title: "Paper no encontrado", robots: { index: false } };
+  return pageMetadata({
+    title: paper.title,
+    description: truncateAtWord(paper.abstract, 155),
+    path: `/papers/${paper.arxivId}`,
+    type: "article",
+  });
 }
 
 export default async function PaperPage({ params }: Props) {
@@ -42,6 +50,10 @@ export default async function PaperPage({ params }: Props) {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildScholarlyArticle(paper)) }}
+      />
       <div style={{ paddingTop: 8 }}>
         <Breadcrumb
           items={[

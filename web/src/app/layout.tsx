@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "QuantumPapers", template: "%s · QuantumPapers" },
   description: "Buscador semántico de papers de ML cuántico",
+  openGraph: { siteName: "QuantumPapers", type: "website", locale: "es_ES" },
+  twitter: { card: "summary_large_image" },
 };
 
 const NAV = [
